@@ -1,20 +1,23 @@
-
+import styles from './Header.module.scss';
 
 const Header = () => {
+    console.log("Meus estilos:", styles);
   return (
-    <div className="container_header">
-      <section className="header-right">
+    <header className={styles.headerContainer}>
+      <div className={styles.headerBrand}>
         <h3> Cláudio Roberto</h3>    
-      </section>
-      <section className="header-left">
+      </div>
+      <div className={styles.headerNavigation}>
             <nav>
              <ul>
-              <li><a className="nav-link" href="#home">Home</a></li>
-              <li><a className="nav-link" href="#about">About</a></li>
+              <li><a className={styles.navLink} href="#home">Home</a></li>
+              <li><a className={styles.navLink} href="#about">About</a></li>
+              <li><a className={styles.navLink} href="#contact">Contact</a></li>
+              <li><a className={styles.navLink} href="#projects">Projects</a></li>
              </ul>
             </nav>
-      </section>
-    </div>
+      </div>
+    </header>
   )
 }
 
