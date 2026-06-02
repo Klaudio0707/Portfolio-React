@@ -1,25 +1,36 @@
 :root {
-  --bg-pure-black: #050505;
-  --bg-card-dark: #0a0a0c;
-  --text-main: #f8f9fa;
-  --text-muted: #a1a1aa;
+  /* === CORES DE FUNDO (ZINC/SLATE) === */
+  --bg-main: #09090b; 
+  --bg-card-dark: #121214; 
   
-  --color-purple: #8b5cf6;
+  /* === TIPOGRAFIA === */
+  --text-main: #ffffff; 
+  --text-muted: #a1a1aa; 
+  
+  /* === CORES DE MARCA E GRADIENTES === */
   --color-pink: #ff318c;
-
-  --brand-gradient: linear-gradient(135deg, var(--color-purple) 0%, var(--color-pink) 100%);
+  --color-purple: #8b5cf6;
+  --brand-gradient: linear-gradient(135deg, var(--color-pink) 0%, var(--color-purple) 100%);
   
+ 
   --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(255, 49, 140, 0.4); 
+  
+  --shadow-base: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 12px 40px -10px rgba(255, 49, 140, 0.25), 0 4px 20px rgba(0, 0, 0, 0.6);
+
   --max-width: 1200px;
 }
 
+/* === FUNDAÇÃO DO DOCUMENTO === */
 html, body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-pure-black);
+  background-color: var(--bg-main);
   color: var(--text-main);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
   scroll-behavior: smooth;
 }
 
