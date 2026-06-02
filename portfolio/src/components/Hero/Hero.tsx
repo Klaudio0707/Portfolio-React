@@ -1,5 +1,6 @@
-import { toast} from 'sonner';
+import { toast } from 'sonner';
 import styles from './Hero.module.scss';
+import { EqualApproximately, MailCheckIcon } from 'lucide-react';
 
 export const Hero = () => {
   const handleCopyContact = async () => {
@@ -21,18 +22,18 @@ export const Hero = () => {
         <p className={styles.heroDescription}>
           Transformo regras de negócio complexas em interfaces fluidas e APIs resilientes.
         </p>
-        
+
         <div className={styles.heroActions}>
-          <a href="/Curriculo_Claudio.pdf" download className={styles.btnPrimary}>
+          <a href="/public/CV_Cláudio_Roberto.pdf" download className={styles.btnPrimary}>
             Baixar CV
           </a>
           <button onClick={handleCopyContact} className={styles.btnSecondary}>
-            Copiar Contato
+            <MailCheckIcon/>  Email
           </button>
         </div>
       </div>
-      
-    {/* Efeito scroll */}
+
+      {/* Efeito scroll */}
       <div className={styles.scrollIndicator}>
         <div className={styles.mouse}>
           <div className={styles.wheel}></div>
