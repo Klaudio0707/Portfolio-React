@@ -5,12 +5,12 @@ export const Hero = () => {
     <section className={styles.heroContainer}>
       
 
-    //efeito scroll
+    {/* Efeito scroll */}
       <div className={styles.scrollIndicator}>
         <div className={styles.mouse}>
           <div className={styles.wheel}></div>
         </div>
-        <span className={styles.scrollText}>Scroll</span>
+        <span className={styles.scrollText}>Click Here</span>
       </div>
 
     </section>
