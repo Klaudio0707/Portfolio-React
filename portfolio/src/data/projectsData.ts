@@ -16,7 +16,7 @@ export const projectsData: ProjectData[] = [
     techStack: ['React', 'TypeScript', 'CSS', 'Cloudflare'],
     status: 'completed',
     motive: 'Aplicação corporativa para o setor de comércio exterior. Estruturei um sistema de múltiplos idiomas e carrossel dinâmico para transmitir credibilidade em nível global, destacando refinamentos de frontend com o uso de `useToast` para feedback tátil imediato nas interações.',
-    image: './src/assets/TheGlobal.JPG',
+    image: './src/assets/projects/TheGlobal.JPG',
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const projectsData: ProjectData[] = [
     techStack: ['React', 'Nestjs', 'TypeScript', 'Neon DB', 'Postgress', 'Resend'],
     status: 'completed',
     motive: 'Plataforma SaaS para gestão de despesas de festas e orquestração de convites. O diferencial de engenharia é a implementação de uma lógica robusta de polling no frontend, mantendo o controle de gastos e respostas atualizados em tempo real na tela do usuário.',
-    image: './src/assets/PartyTime.JPG',
+    image: './src/assets/projects/PartyTime.JPG',
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ export const projectsData: ProjectData[] = [
     techStack: ['React', 'TypeScript', 'Charts.js'],
     status: 'completed',
     motive: 'Dashboard administrativa em React focada no gerenciamento de métricas de uma empresa. A arquitetura faz uso intenso de polling logic para capturar e re-renderizar dados críticos na tela sem a necessidade de recarregar a sessão.',
-    image: './src/assets/Fintech.JPG',
+    image: './src/assets/projects/Fintech.JPG',
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ export const projectsData: ProjectData[] = [
     techStack: ['React', 'Vite', 'Python', 'Prompt Engineering', 'IA'],
     status: 'completed',
     motive: 'Sistema orientado por inteligência artificial. O frontend em React captura arquivos e textos do usuário e os envia para um backend arquitetado em Python, que injeta prompts pré-programados para processamento assíncrono via API do Google Gemini.',
-    image: './src/assets/MailSense.JPG',
+    image: './src/assets/projects/MailSense.JPG',
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const projectsData: ProjectData[] = [
     techStack: ['React', 'Node.js', 'Context API'],
     status: 'completed',
     motive: 'Projeto acadêmico para gestão de contatos, desenhado para consolidar os fundamentos de arquitetura frontend. Foco absoluto na estruturação de um estado global limpo para o controle dinâmico de leitura e gravação de formulários.',
-    image: './src/assets/MyContacts.JPG',
+    image: './src/assets/projects/MyContacts.JPG',
   },
   {
     id: 6,
@@ -61,6 +61,6 @@ export const projectsData: ProjectData[] = [
     techStack: ['React', 'API Rest', 'CSS', 'Firebase Auth'],
     status: 'completed',
     motive: 'Plataforma focada na jornada de e-commerce para compra de ingressos de cinema. A engenharia destacada foi a integração do Firebase Authentication, terceirizando o fluxo de segurança para permitir um login ágil e seguro via conta Google do usuário.',
-    image: './src/assets/CineTascom.JPG',
+    image: './src/assets/projects/CineTascom.JPG',
   }
 ];
