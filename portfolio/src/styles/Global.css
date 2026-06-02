@@ -1,0 +1,42 @@
+/* --- FUNDAÇÃO DO THEME ESCURO: FULLSTACK HYBRID --- */
+:root {
+  /* Fundo Preto Absoluto / Profundo */
+  --bg-primary: #050505; 
+  --bg-secondary: #111111; /* Para os cartões de projetos/serviços */
+  --bg-tertiary: #1a1a1a;  /* Para efeitos de hover */
+
+  /* Tipografia Clara e Elegante */
+  --text-primary: #f8f9fa;
+  --text-secondary: #a1a1aa;
+
+  /* Cores de Destaque (Brand Accents) */
+  --brand-angular: #dd0031;      /* Vermelho Angular */
+  --brand-spring: #6db33f;       /* Verde Spring Boot */
+  --brand-purple: #8b5cf6;       /* Roxo Moderno e Vibrante */
+
+  /* Gradiente Principal (O truque para não parecer uma árvore de Natal) */
+  --gradient-primary: linear-gradient(135deg, var(--brand-purple), var(--brand-angular));
+  
+  /* Efeitos de Brilho (Glow) para botões e inputs focados */
+  --glow-purple: rgba(139, 92, 246, 0.15);
+  --glow-spring: rgba(109, 179, 63, 0.15);
+
+  /* Bordas e Divisórias */
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Reset Global de Cores (Mantido) */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id], div[id] {
+  scroll-margin-top: 100px; 
+}
