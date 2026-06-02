@@ -1,7 +1,6 @@
 import styles from './Header.module.scss';
 
 const Header = () => {
-    console.log("Meus estilos:", styles);
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerBrand}>

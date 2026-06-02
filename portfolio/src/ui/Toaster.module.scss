@@ -1,23 +1,27 @@
 .customToast {
-  background-color: rgba(10, 10, 12, 0.85) !important;
+  background-color: rgba(49, 10, 49, 0.85) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid var(--border-subtle) !important;
-  color: var(--text-main) !important;
+  color: var(--color-pink-text) !important;
   
-  border-radius: 50px !important;
+  border-radius: 5cm !important;
   padding: 8px 16px !important;
   min-height: auto !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
   
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 5px;
 }
 
 .toastTitle {
-  font-size: 0.85rem !important;
+  font-size: 0.95rem !important;
   font-weight: 500 !important;
   font-family: inherit !important;
+  
+  text-align: center !important;
+  margin: 0 !important;
 }
 
 .icon {

@@ -1,13 +1,13 @@
+import { toast} from 'sonner';
 import styles from './Hero.module.scss';
 
 export const Hero = () => {
   const handleCopyContact = async () => {
     try {
       await navigator.clipboard.writeText('claudiorobertof@outlook.com.br');
-      
-    //  toast.success('Toast: Contato copiado para a área de transferência!');
+      toast.success('Email copiado !');
     } catch (err) {
-      // toast.error('Falha ao copiar contato');
+      toast.error('Falha ao copiar contato');
     }
   };
   return (

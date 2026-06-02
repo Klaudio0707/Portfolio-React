@@ -11,7 +11,7 @@ import styles from "./Toaster.module.scss";
 const Toaster = ({ ...props }: ToasterProps) => {
   return (
     <Sonner
-      theme="dark"
+      theme="system"
       position="top-center"
       offset="90px"
       className="toaster group"
