@@ -1,10 +1,37 @@
 import styles from './Hero.module.scss';
 
 export const Hero = () => {
-  return (
-    <section className={styles.heroContainer}>
+  const handleCopyContact = async () => {
+    try {
+      await navigator.clipboard.writeText('claudiorobertof@outlook.com.br');
       
-
+    //  toast.success('Toast: Contato copiado para a área de transferência!');
+    } catch (err) {
+      // toast.error('Falha ao copiar contato');
+    }
+  };
+  return (
+    <section className={styles.heroContainer} id="home">
+      <div className={styles.heroContent}>
+        <span className={styles.heroBadge}>Desenvolvedor Fullstack</span>
+        <h1 className={styles.heroTitle}>
+          Arquitetando soluções com <br />
+          <span className={styles.heroHighlight}>Clean Code</span> & Performance.
+        </h1>
+        <p className={styles.heroDescription}>
+          Transformo regras de negócio complexas em interfaces fluidas e APIs resilientes.
+        </p>
+        
+        <div className={styles.heroActions}>
+          <a href="/Curriculo_Claudio.pdf" download className={styles.btnPrimary}>
+            Baixar CV
+          </a>
+          <button onClick={handleCopyContact} className={styles.btnSecondary}>
+            Copiar Contato
+          </button>
+        </div>
+      </div>
+      
     {/* Efeito scroll */}
       <div className={styles.scrollIndicator}>
         <div className={styles.mouse}>
