@@ -76,5 +76,16 @@ export const projectsData: ProjectData[] = [
     image: './src/assets/projects/CineTascom.JPG',
     deployUrl: 'https://thecomex-deploy.com.br', 
     githubUrl: 'https://github.com/claudioroberto/theglobal',
+
+  },
+  {
+    id: 7, 
+    title: 'Import Control',
+    keyHighlight: 'Arquitetura Backend & Automação Logística',
+    techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'Maven'],
+    status: 'completed',
+    motive: 'API RESTful projetada do zero para gestão do ciclo de vida de importações. Aplicando Clean Architecture e modelagem de entidades com UUIDs, a solução converte regras tributárias complexas em rotas consumíveis, eliminando processos manuais do setor de PCP.',
+    image: './src/assets/ImportControl.JPG', 
+    githubUrl: 'https://github.com/Klaudio0707/Import-Control',
   }
 ];
