@@ -20,7 +20,7 @@ export const projectsData: ProjectData[] = [
     motive: 'Aplicação corporativa para o setor de comércio exterior. Estruturei um sistema de múltiplos idiomas e carrossel dinâmico para transmitir credibilidade em nível global, destacando refinamentos de frontend com o uso de `useToast` para feedback tátil imediato nas interações.',
     image: './src/assets/projects/TheGlobal.JPG',
     deployUrl: 'https://thecomex-deploy.com.br', 
-    githubUrl: 'https://github.com/claudioroberto/theglobal',
+    githubUrl: 'https://github.com/Klaudio0707/landing-b2b',
   },
   {
     id: 2,
@@ -30,8 +30,8 @@ export const projectsData: ProjectData[] = [
     status: 'completed',
     motive: 'Plataforma SaaS para gestão de despesas de festas e orquestração de convites. O diferencial de engenharia é a implementação de uma lógica robusta de polling no frontend, mantendo o controle de gastos e respostas atualizados em tempo real na tela do usuário.',
     image: './src/assets/projects/PartyTime.JPG',
-    deployUrl: 'https://thecomex-deploy.com.br', 
-    githubUrl: 'https://github.com/claudioroberto/theglobal',
+    deployUrl: 'https://front-partytime.vercel.app/', 
+    githubUrl: 'https://github.com/Klaudio0707/front-partytime',
   },
    {
     id: 3,
@@ -41,8 +41,8 @@ export const projectsData: ProjectData[] = [
     status: 'completed',
     motive: 'Sistema orientado por inteligência artificial. O frontend em React captura arquivos e textos do usuário e os envia para um backend arquitetado em Python, que injeta prompts pré-programados para processamento assíncrono via API do Google Gemini.',
     image: './src/assets/projects/MailSense.JPG',
-    deployUrl: 'https://thecomex-deploy.com.br', 
-    githubUrl: 'https://github.com/claudioroberto/theglobal',
+    deployUrl: 'https://mailsense-ai.vercel.app/', 
+    githubUrl: 'https://github.com/Klaudio0707/mailsense',
   },
   {
     id: 4,
@@ -52,19 +52,18 @@ export const projectsData: ProjectData[] = [
     status: 'completed',
     motive: 'Dashboard administrativa em React focada no gerenciamento de métricas de uma empresa. A arquitetura faz uso intenso de polling logic para capturar e re-renderizar dados críticos na tela sem a necessidade de recarregar a sessão.',
     image: './src/assets/projects/Fintech.JPG',
-    deployUrl: 'https://thecomex-deploy.com.br', 
-    githubUrl: 'https://github.com/claudioroberto/theglobal',
+    deployUrl: 'https://fintech-origamid-omega.vercel.app/', 
+    githubUrl: 'https://github.com/Klaudio0707/Fintech-Origamid',
   },
-  {
-    id: 5,
-    title: 'MyContacts',
-    keyHighlight: 'Arquitetura Acadêmica de CRUD',
-    techStack: ['React', 'Node.js', 'Context API'],
+   {
+    id: 6, 
+    title: 'Import Control',
+    keyHighlight: 'Arquitetura Backend & Automação Logística',
+    techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'Maven'],
     status: 'completed',
-    motive: 'Projeto acadêmico para gestão de contatos, desenhado para consolidar os fundamentos de arquitetura frontend. Foco absoluto na estruturação de um estado global limpo para o controle dinâmico de leitura e gravação de formulários.',
-    image: './src/assets/projects/MyContacts.JPG',
-    deployUrl: 'https://thecomex-deploy.com.br', 
-    githubUrl: 'https://github.com/claudioroberto/theglobal',
+    motive: 'API RESTful projetada do zero para gestão do ciclo de vida de importações. Aplicando Clean Architecture e modelagem de entidades com UUIDs, a solução converte regras tributárias complexas em rotas consumíveis, eliminando processos manuais do setor de PCP.',
+    image: './src/assets/projects/ImportControl.JPG', 
+    githubUrl: 'https://github.com/Klaudio0707/Import-Control',
   },
   {
     id: 6,
@@ -74,18 +73,9 @@ export const projectsData: ProjectData[] = [
     status: 'completed',
     motive: 'Plataforma focada na jornada de e-commerce para compra de ingressos de cinema. A engenharia destacada foi a integração do Firebase Authentication, terceirizando o fluxo de segurança para permitir um login ágil e seguro via conta Google do usuário.',
     image: './src/assets/projects/CineTascom.JPG',
-    deployUrl: 'https://thecomex-deploy.com.br', 
-    githubUrl: 'https://github.com/claudioroberto/theglobal',
+    deployUrl: 'https://cine-tascom.vercel.app/', 
+    githubUrl: 'https://github.com/Klaudio0707/CineTascom',
 
-  },
-  {
-    id: 7, 
-    title: 'Import Control',
-    keyHighlight: 'Arquitetura Backend & Automação Logística',
-    techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'Maven'],
-    status: 'completed',
-    motive: 'API RESTful projetada do zero para gestão do ciclo de vida de importações. Aplicando Clean Architecture e modelagem de entidades com UUIDs, a solução converte regras tributárias complexas em rotas consumíveis, eliminando processos manuais do setor de PCP.',
-    image: './src/assets/ImportControl.JPG', 
-    githubUrl: 'https://github.com/Klaudio0707/Import-Control',
   }
+ 
 ];
