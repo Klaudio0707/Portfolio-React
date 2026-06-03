@@ -1,45 +1,73 @@
+
 import { toast } from 'sonner';
 import styles from './Hero.module.scss';
-import { EqualApproximately, MailCheckIcon } from 'lucide-react';
+import { renderTechIcon } from '../../utils/renderTechIcon';
+import { useScrollVisibility } from '../../hooks/useScrollVisibility';
 
 export const Hero = () => {
+ const isScrolled = useScrollVisibility(50);
+  
   const handleCopyContact = async () => {
     try {
       await navigator.clipboard.writeText('claudiorobertof@outlook.com.br');
-      toast.success('Email copiado !');
+      toast.success('Email copiado!');
     } catch (err) {
       toast.error('Falha ao copiar contato');
     }
   };
-  return (
-    <section className={styles.heroContainer} id="home">
-      <div className={styles.heroContent}>
-        <span className={styles.heroBadge}>Desenvolvedor Fullstack</span>
-        <h1 className={styles.heroTitle}>
-          Arquitetando soluções com <br />
-          <span className={styles.heroHighlight}>Clean Code</span> & Performance.
-        </h1>
-        <p className={styles.heroDescription}>
-          Transformo regras de negócio complexas em interfaces fluidas e APIs resilientes.
-        </p>
 
-        <div className={styles.heroActions}>
-          <a href="/public/CV_Cláudio_Roberto.pdf" download className={styles.btnPrimary}>
-            Baixar CV
-          </a>
-          <button onClick={handleCopyContact} className={styles.btnSecondary}>
-            <MailCheckIcon/>  Email
-          </button>
+  return (
+    <section className={styles.heroSection}>
+      <div className={styles.heroGrid}>
+        
+        <div className={styles.textContent}>
+          <span className={styles.greeting}>Olá, meu nome é Cláudio Roberto</span>
+          <h1 className={styles.title}>
+            Desenvolvedor de Software
+          </h1>
+          <p className={styles.bio}>
+            Natural do Recife e graduado em Análise e Desenvolvimento de Sistemas. 
+            Minha trajetória une a lógica rigorosa das operações logísticas corporativas 
+            com a engenharia de software limpa. Atualmente, dedico-me a arquitetar e 
+            escalar soluções robustas utilizando <strong>Java, Spring Boot, Angular e React</strong>.
+          </p>
+          
+          <div className={styles.actionButtons}>
+            <a href="/CV_Cláudio_Roberto.pdf" download className={styles.btnPrimary}>
+              Baixar CV
+            </a>
+             <a href="#contact" onClick={handleCopyContact} className={styles.btnOutline}>
+              Email
+            </a>
+            <a href="#projects" className={styles.btnOutline}>
+              Ver Projetos
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.visualContent}>
+          <div className={styles.techConstellation}>
+            <div className={styles.glowRing}></div>
+            
+            <div className={`${styles.techBadge} ${styles.pos1}`}>{renderTechIcon('Java')}</div>
+            <div className={`${styles.techBadge} ${styles.pos2}`}>{renderTechIcon('Spring Boot')}</div>
+            <div className={`${styles.techBadge} ${styles.pos3}`}>{renderTechIcon('Google')}</div>
+            <div className={`${styles.techBadge} ${styles.pos4}`}>{renderTechIcon('Typescript')}</div>
+            <div className={`${styles.techBadge} ${styles.pos5}`}>{renderTechIcon('Angular')}</div>
+            <div className={`${styles.techBadge} ${styles.pos6}`}>{renderTechIcon('React')}</div>
+          </div>
         </div>
       </div>
-
-      {/* Efeito scroll */}
-      <div className={styles.scrollIndicator}>
+      <a 
+        href="#sobre" 
+        className={`${styles.scrollIndicator} ${isScrolled ? styles.hidden : ''}`}
+        aria-label="Rolar para a seção sobre"
+      >
         <div className={styles.mouse}>
           <div className={styles.wheel}></div>
         </div>
         <span className={styles.scrollText}>Click Here</span>
-      </div>
+      </a>
 
     </section>
   );
