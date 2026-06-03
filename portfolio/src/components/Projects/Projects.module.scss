@@ -111,7 +111,6 @@
     cursor: pointer;
   }
 
-  /* Aplica o destaque quando a propriedade featured for true no JSON */
   &.isFeatured {
     border-color: var(--color-purple); 
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.25); 

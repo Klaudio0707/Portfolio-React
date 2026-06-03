@@ -25,8 +25,6 @@ export const Projects = () => {
                 >
                     <ChevronLeft size={24} />
                 </button>
-
-                {/* Trilho Horizontal (Carrossel) */}
                 <div className={styles.carouselTrack} ref={trackRef}>
                     {projectsData.map((project) => (
                         <article
