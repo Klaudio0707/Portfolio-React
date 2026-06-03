@@ -1,10 +1,9 @@
 # 💻 Portfólio de Engenharia de Software
-
 Bem-vindo ao repositório do meu portfólio pessoal. Este projeto não é apenas uma vitrine visual, mas uma demonstração prática dos meus princípios de arquitetura de frontend, focado em performance, componentização e Clean Code.
 
 ## 🚀 Sobre Mim
 
-Sou **Cláudio Roberto da Silva Filho**, um Desenvolvedor Fullstack baseado no Recife, Pernambuco. Com uma base sólida em Análise e Desenvolvimento de Sistemas e uma trajetória que une a precisão das operações logísticas corporativas à engenharia de software, dedico-me a construir aplicações robustas, testáveis e escaláveis.
+Sou **Cláudio Roberto **, um Desenvolvedor Fullstack baseado no Recife, Pernambuco. Com uma base sólida em Análise e Desenvolvimento de Sistemas e uma trajetória que une a precisão das operações logísticas corporativas à engenharia de software, dedico-me a construir aplicações robustas, testáveis e escaláveis.
 
 Minha stack principal de atuação engloba **Java, Spring Boot, Angular e React**.
 
@@ -30,4 +29,4 @@ Certifique-se de ter o Node.js instalado em sua máquina.
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/klaudio0707/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
+   git clone [https://github.com/Klaudio0707/Portfolio-React](https://github.com/Klaudio0707/Portfolio-React)
