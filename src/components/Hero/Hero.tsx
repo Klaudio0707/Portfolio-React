@@ -1,13 +1,14 @@
-
+// src/components/Hero/Hero.tsx
 import { toast } from 'sonner';
 import styles from './Hero.module.scss';
 import { renderTechIcon } from '../../utils/renderTechIcon';
 import { useScrollVisibility } from '../../hooks/useScrollVisibility';
 
 export const Hero = () => {
- const isScrolled = useScrollVisibility(50);
+  const isScrolled = useScrollVisibility(50);
   
-  const handleCopyContact = async () => {
+  const handleCopyContact = async (e: React.MouseEvent) => {
+    e.preventDefault();
     try {
       await navigator.clipboard.writeText('claudiorobertof@outlook.com.br');
       toast.success('Email copiado!');
@@ -17,7 +18,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className={styles.heroSection}>
+    <section className={styles.heroSection} id="home">
       <div className={styles.heroGrid}>
         
         <div className={styles.textContent}>
@@ -33,10 +34,10 @@ export const Hero = () => {
           </p>
           
           <div className={styles.actionButtons}>
-            <a href="/CV_Cláudio_Roberto.pdf" download className={styles.btnPrimary}>
+            <a href="/CV_Claudio_Roberto.pdf" download className={styles.btnPrimary}>
               Baixar CV
             </a>
-             <a href="#contact" onClick={handleCopyContact} className={styles.btnOutline}>
+            <a href="#contact" onClick={handleCopyContact} className={styles.btnOutline}>
               Email
             </a>
             <a href="#projects" className={styles.btnOutline}>
@@ -58,6 +59,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+
       <a 
         href="#sobre" 
         className={`${styles.scrollIndicator} ${isScrolled ? styles.hidden : ''}`}
@@ -68,7 +70,6 @@ export const Hero = () => {
         </div>
         <span className={styles.scrollText}>Click Here</span>
       </a>
-
     </section>
   );
 };
