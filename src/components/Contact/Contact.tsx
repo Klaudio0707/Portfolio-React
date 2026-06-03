@@ -1,10 +1,10 @@
 import { toast } from 'sonner';
-import styles from './Contact.module.scss'
+import styles from './Contact.module.scss';
 import { useState, type FormEvent } from 'react';
 import { Loader2, Send } from 'lucide-react';
 
 const Contact = () => {
-    const [name, setName] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,7 +25,6 @@ const Contact = () => {
 
       toast.success('Mensagem enviada com sucesso! Entrarei em contato em breve.');
       
-    
       setName('');
       setEmail('');
       setMessage('');
@@ -36,11 +35,12 @@ const Contact = () => {
     }
   };
   return (
-    <section>
-        <div className={styles.contactSection}>
-            <div className={styles.header}>
+    
+       <section className={styles.contactSection} id="contato">
+      <div className={styles.container}>
+        <div className={styles.header}>
           <span className={styles.badge}>Contato</span>
-          <h2 className={styles.title}>Vamos Construir Algo Juntos?</h2>
+          <h2 className={styles.title}>Entre em Contato</h2>
           <p className={styles.subtitle}>
             Sinta-se à vontade para enviar uma mensagem. Estou sempre aberto a novas propostas, 
             projetos desafiadores e conexões no mercado de engenharia de software.
