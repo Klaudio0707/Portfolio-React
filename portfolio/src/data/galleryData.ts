@@ -12,7 +12,7 @@ export const galleryData: GalleryEvent[] = [
         title: 'Desenvolvedor de Sistemas(IFPE - Porto Digital)',
         context: 'Ecossistema Porto Digital',
         description: 'Conclusão do curso de Programadores de Sistema em 2017. O marco zero da minha jornada, fundamentando a lógica de programação com o valioso apoio do polo tecnológico de Recife.',
-        image: './src/assets/gallery/ProgramadoresDeSist-ifpe.jpg',
+        image: './src/assets/gallery/ProgramadoresSist-ifpe.jpeg',
     },
     {
         id: 2,

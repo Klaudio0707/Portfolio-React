@@ -75,7 +75,7 @@ export const projectsData: ProjectData[] = [
     id: 6,
     title: 'Fintech Dashboard',
     keyHighlight: 'Painel Corporativo & Reatividade',
-    techStack: ['React', 'TypeScript', 'Charts.js'],
+    techStack: ['React', 'TypeScript', 'Chartjs'],
     status: 'completed',
     motive: 'Dashboard administrativa em React focada no gerenciamento de métricas de uma empresa. A arquitetura faz uso intenso de polling logic para capturar e re-renderizar dados críticos na tela sem a necessidade de recarregar a sessão.',
     image: './src/assets/projects/Fintech.JPG',
