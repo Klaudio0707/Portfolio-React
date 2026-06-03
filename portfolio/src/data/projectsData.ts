@@ -8,6 +8,7 @@ export interface ProjectData {
   image: string;
   deployUrl?: string;
   githubUrl?: string;
+  featured?: boolean;
 }
 
 export const projectsData: ProjectData[] = [
@@ -21,6 +22,7 @@ export const projectsData: ProjectData[] = [
     image: './src/assets/projects/TheGlobal.JPG',
     deployUrl: 'https://thecomex-deploy.com.br', 
     githubUrl: 'https://github.com/Klaudio0707/landing-b2b',
+    featured: true,
   },
   {
     id: 2,
@@ -32,9 +34,21 @@ export const projectsData: ProjectData[] = [
     image: './src/assets/projects/PartyTime.JPG',
     deployUrl: 'https://front-partytime.vercel.app/', 
     githubUrl: 'https://github.com/Klaudio0707/front-partytime',
+    featured: true,
+  },
+     {
+    id: 3, 
+    title: 'Import Control',
+    keyHighlight: 'Arquitetura Backend & Automação Logística',
+    techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'Maven'],
+    status: 'completed',
+    motive: 'API RESTful projetada do zero para gestão do ciclo de vida de importações. Aplicando Clean Architecture e modelagem de entidades com UUIDs, a solução converte regras tributárias complexas em rotas consumíveis, eliminando processos manuais do setor de PCP.',
+    image: './src/assets/projects/ImportControl.JPG', 
+    githubUrl: 'https://github.com/Klaudio0707/Import-Control',
+    featured: true,
   },
    {
-    id: 3,
+    id: 4,
     title: 'MailSense',
     keyHighlight: 'Integração GenAI (Google Gemini)',
     techStack: ['React', 'Vite', 'Python', 'Prompt Engineering', 'IA'],
@@ -43,30 +57,10 @@ export const projectsData: ProjectData[] = [
     image: './src/assets/projects/MailSense.JPG',
     deployUrl: 'https://mailsense-ai.vercel.app/', 
     githubUrl: 'https://github.com/Klaudio0707/mailsense',
+    featured: true,
   },
   {
-    id: 4,
-    title: 'Fintech Dashboard',
-    keyHighlight: 'Painel Corporativo & Reatividade',
-    techStack: ['React', 'TypeScript', 'Charts.js'],
-    status: 'completed',
-    motive: 'Dashboard administrativa em React focada no gerenciamento de métricas de uma empresa. A arquitetura faz uso intenso de polling logic para capturar e re-renderizar dados críticos na tela sem a necessidade de recarregar a sessão.',
-    image: './src/assets/projects/Fintech.JPG',
-    deployUrl: 'https://fintech-origamid-omega.vercel.app/', 
-    githubUrl: 'https://github.com/Klaudio0707/Fintech-Origamid',
-  },
-   {
-    id: 6, 
-    title: 'Import Control',
-    keyHighlight: 'Arquitetura Backend & Automação Logística',
-    techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'Maven'],
-    status: 'completed',
-    motive: 'API RESTful projetada do zero para gestão do ciclo de vida de importações. Aplicando Clean Architecture e modelagem de entidades com UUIDs, a solução converte regras tributárias complexas em rotas consumíveis, eliminando processos manuais do setor de PCP.',
-    image: './src/assets/projects/ImportControl.JPG', 
-    githubUrl: 'https://github.com/Klaudio0707/Import-Control',
-  },
-  {
-    id: 6,
+    id: 5,
     title: 'Cine Tascom',
     keyHighlight: 'E-commerce & Autenticação OAuth',
     techStack: ['React', 'API Rest', 'CSS', 'Firebase Auth'],
@@ -75,7 +69,29 @@ export const projectsData: ProjectData[] = [
     image: './src/assets/projects/CineTascom.JPG',
     deployUrl: 'https://cine-tascom.vercel.app/', 
     githubUrl: 'https://github.com/Klaudio0707/CineTascom',
-
+    featured: true,
+  },
+   {
+    id: 6,
+    title: 'Fintech Dashboard',
+    keyHighlight: 'Painel Corporativo & Reatividade',
+    techStack: ['React', 'TypeScript', 'Charts.js'],
+    status: 'completed',
+    motive: 'Dashboard administrativa em React focada no gerenciamento de métricas de uma empresa. A arquitetura faz uso intenso de polling logic para capturar e re-renderizar dados críticos na tela sem a necessidade de recarregar a sessão.',
+    image: './src/assets/projects/Fintech.JPG',
+    deployUrl: 'https://fintech-origamid-omega.vercel.app/', 
+    githubUrl: 'https://github.com/Klaudio0707/Fintech-Origamid',
+    featured: false,
+  },
+  {
+    id: 7, 
+    title: 'BusPay (App de Mobilidade)',
+    keyHighlight: 'UX/UI Design & System Flow',
+    techStack: ['Figma', 'Prototipagem', 'Wireframing', 'UX/UI'],
+    status: 'completed',
+    motive: 'Projeto acadêmico focado na arquitetura da experiência do usuário (UX) para mobilidade urbana. O protótipo de alta fidelidade mapeia rotas complexas, como sistemas de login, recarga e bilhetagem digital, provando a capacidade de desenhar as regras de negócio e a interface antes do ciclo de desenvolvimento de software.',
+    image: './src/assets/projects/Figma-BusPay.JPG', 
+    deployUrl: 'https://www.figma.com/proto/MHU7uHHhWhXDKZVupkfWRj/Prototipo-alta-fidelidade?node-id=2004-118&t=AgiO2JQUzXUM5f43-1&starting-point-node-id=2004%3A118', 
   }
  
 ];
