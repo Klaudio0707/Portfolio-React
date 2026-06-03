@@ -44,7 +44,7 @@ const About = () => {
                     aria-label="Rolar para a direita">
                     <ChevronRight size={24} />
                 </button>
-
+                
             </div>
         </section>
     );
