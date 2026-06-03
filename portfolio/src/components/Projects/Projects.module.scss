@@ -1,3 +1,4 @@
+
 .projectsSection {
   padding: 6rem 2rem;
   background-color: var(--bg-main);
@@ -37,15 +38,63 @@
   }
 }
 
-.gridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+
+.carouselWrapper {
   width: 100%;
   max-width: var(--max-width);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navButton {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--bg-card-dark);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--border-glow);
+    color: var(--color-pink);
+    transform: scale(1.1);
+  }
+
+  &.leftBtn { left: -24px; }
+  &.rightBtn { right: -24px; }
+
+  @media (max-width: 768px) {
+    display: none; 
+  }
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 3rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0 3rem 0; 
+  width: 100%;
+
+  scrollbar-width: none; 
+  &::-webkit-scrollbar { display: none; }
 }
 
 .projectCard {
+  flex: 0 0 340px; 
+  scroll-snap-align: start;
+  
   display: flex;
   flex-direction: column;
   background-color: var(--bg-card-dark);
@@ -60,6 +109,27 @@
     border-color: var(--border-glow);
     box-shadow: var(--shadow-glow);
     cursor: pointer;
+  }
+
+  /* Aplica o destaque quando a propriedade featured for true no JSON */
+  &.isFeatured {
+    border-color: var(--color-purple); 
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.25); 
+    
+    .imageWrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    &:hover {
+      box-shadow: 0 12px 40px -10px rgba(139, 92, 246, 0.4), 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
   }
 }
 
