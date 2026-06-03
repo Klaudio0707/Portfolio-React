@@ -2,43 +2,55 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
-  padding: 1.2rem 2rem;
+  width: 100%;
+  padding: 1rem 5%; 
   background-color: rgba(5, 5, 5, 0.75);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
+  
+
+  position: fixed;
+  top: 0;
+  z-index: 100; 
 
   .headerBrand {
     display: flex;
     align-items: center;
 
-    a,
-    h1,
-    h3 {
-
-      font-family: var(--heading, inherit);
-      font-weight: 500;
-      color: var(--text-h, var(--text-main));
-      font-size: 18px;
-      line-height: 118%;
-      letter-spacing: -0.24px;
+    .logoGroup {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
       text-decoration: none;
-      transition: color 0.3s ease;
-      margin: 0;
-    }
-  }
 
-  .logoGroup {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
+      .microAvatar {
+        width: 42px; 
+        height: 42px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--color-purple);
+        transition: transform 0.3s ease;
+      }
 
-    .microAvatar {
-      width: 76px;
-      height: 76px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid var(--color-purple);
+      .logo {
+        font-family: var(--heading, inherit);
+        font-weight: 600;
+        color: var(--text-main);
+        font-size: 1.1rem;
+        letter-spacing: -0.5px;
+        margin: 0;
+        transition: color 0.3s ease;
+      }
+
+      &:hover {
+        .microAvatar {
+          transform: scale(1.05);
+        }
+        .logo {
+          color: var(--color-pink);
+        }
+      }
     }
   }
 
@@ -49,7 +61,7 @@
     ul {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 2rem;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -60,10 +72,48 @@
       text-decoration: none;
       font-weight: 500;
       font-size: 0.95rem;
-      transition: color 0.2s ease;
+      transition: all 0.3s ease;
 
       &:hover {
-        color: var(--color-pink);
+        color: var(--text-main);
+        text-shadow: 0 0 8px rgba(255, 49, 140, 0.4); 
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContainer {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    gap: 1.2rem;
+    
+    .headerBrand {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .headerNavigation {
+      width: 100%;
+      justify-content: center; 
+      
+      nav {
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+      }
+      
+      ul {
+        width: 100%;
+        justify-content: center; 
+        flex-wrap: wrap; 
+        gap: 1rem 1.5rem; 
+      }
+
+      .navLink {
+        font-size: 0.9rem;
       }
     }
   }
