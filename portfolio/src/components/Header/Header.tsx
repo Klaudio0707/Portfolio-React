@@ -1,10 +1,13 @@
 import styles from './Header.module.scss';
-
+import fotoPerfil from '../../assets/foto-perfil.jpeg';
 const Header = () => {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerBrand}>
-        <h3> Cláudio Roberto</h3>
+        <div className={styles.logoGroup}>
+          <img src={fotoPerfil} alt="Cláudio Roberto" className={styles.microAvatar} />
+          <h1 className={styles.logo}>Cláudio Roberto</h1>
+        </div>
       </div>
       <div className={styles.headerNavigation}>
         <nav>

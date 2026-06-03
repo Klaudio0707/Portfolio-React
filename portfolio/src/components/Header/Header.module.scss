@@ -12,7 +12,9 @@
     display: flex;
     align-items: center;
 
-    a, h1, h3 {
+    a,
+    h1,
+    h3 {
 
       font-family: var(--heading, inherit);
       font-weight: 500;
@@ -26,19 +28,34 @@
     }
   }
 
+  .logoGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    .microAvatar {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--color-purple);
+    }
+  }
+
   .headerNavigation {
     display: flex;
     align-items: center;
-    
+
     ul {
       display: flex;
       align-items: center;
-      gap: 20px; 
+      gap: 20px;
       list-style: none;
       margin: 0;
       padding: 0;
     }
-  .navLink {
+
+    .navLink {
       color: var(--text-muted);
       text-decoration: none;
       font-weight: 500;
