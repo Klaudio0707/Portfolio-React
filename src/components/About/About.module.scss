@@ -154,3 +154,51 @@
     color: var(--text-muted);
   }
 }
+@media (max-width: 768px) {
+  .mainInfo {
+    h3 { font-size: 1.1rem; } 
+    .motive { font-size: 0.85rem; } 
+  }
+  .cardActions a {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .aboutContainer {
+    padding: 4rem 1rem; 
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+    
+    .title {
+      font-size: 2.2rem;
+    }
+  }
+
+  .carouselTrack {
+    gap: 1rem; 
+    padding-bottom: 1rem;
+  }
+
+  .carouselCard {
+    flex: 0 0 85vw; 
+    max-width: 350px;
+  }
+
+  .imageContainer {
+    height: 180px; 
+  }
+
+  .cardContent {
+    padding: 1.2rem;
+    
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
