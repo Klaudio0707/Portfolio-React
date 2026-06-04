@@ -1,3 +1,8 @@
+import {ApresentacaoProjeto} from '@assets/gallery/apresentação-projeto.jpeg';
+import CursoGrauTecnico from '@assets/gallery/curso-Grau Tecnico.jpeg';
+import GrupoTascom from '@assets/gallery/grupo-tascom.jpeg';
+import ProgramadoresSistIfpe from '@assets/gallery/ProgramadoresSist-ifpe.jpeg';
+
 export interface GalleryEvent {
     id: number;
     title: string;
@@ -12,27 +17,27 @@ export const galleryData: GalleryEvent[] = [
         title: 'Desenvolvedor de Sistemas(IFPE - Porto Digital)',
         context: 'Ecossistema Porto Digital',
         description: 'Conclusão do curso de Programadores de Sistema em 2017. O marco zero da minha jornada, fundamentando a lógica de programação com o valioso apoio do polo tecnológico de Recife.',
-        image: './src/assets/gallery/ProgramadoresSist-ifpe.jpeg',
+        image: ProgramadoresSistIfpe,
     },
     {
         id: 2,
         title: 'Imersão em Infraestrutura',
         context: 'Grau Técnico',
         description: 'Início da formação como Técnico em Informática em 2019. Uma etapa crucial para aprofundar o entendimento sobre redes, sistemas operacionais e os alicerces do hardware e software.',
-        image: './src/assets/gallery/curso-Grau Tecnico.jpeg',
+        image: CursoGrauTecnico,
     },
     {
         id: 3,
         title: 'Apresentação Técnica',
         context: 'Tascom Academy',
         description: 'Defesa de projeto estruturado em TypeScript para a turma de desenvolvedores. Excelente oportunidade para exercitar soft skills, comunicação assertiva e domínio arquitetural sob avaliação.',
-        image: './src/assets/gallery/apresentação-projeto.jpeg',
+        image: ApresentacaoProjeto,
     },
     {
         id: 4,
         title: 'Entrega do Frontend - Tascom',
         context: 'Sinergia & Equipe',
         description: 'Reunião com o meu grupo da Tascom Academy após a finalização bem-sucedida de toda a trilha de Frontend. Vivência prática de colaboração, code review e cultura ágil.',
-        image: './src/assets/gallery/grupo-tascom.jpeg',
+        image: GrupoTascom,
     }
 ];
