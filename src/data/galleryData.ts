@@ -1,7 +1,7 @@
-import ApresentacaoProjeto from '@assets/gallery/apresentacao_projeto.jpeg';
-import CursoGrauTecnico from '@assets/gallery/grau_tecnico.jpeg';
-import GrupoTascom from '@assets/gallery/grupo_tascom.jpeg';
-import ProgramadoresSistIfpe from '@assets/gallery/programadores_ifpe.jpeg';
+import ApresentacaoProjeto from '@assets/gallery/apresentacao.jpeg';
+import CursoGrauTecnico from '@assets/gallery/grautecnico.jpeg';
+import GrupoTascom from '@assets/gallery/tascom.jpeg';
+import ProgramadoresSistIfpe from '@assets/gallery/ifpe.jpeg';
 
 export interface GalleryEvent {
     id: number;
