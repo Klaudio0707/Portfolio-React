@@ -12,9 +12,9 @@ export async function POST(request: Request) {
       return new Response(JSON.stringify({ error: 'Campos obrigatórios ausentes.' }), { status: 400 });
     }
 
-    const data = await resend.emails.send({
-      from: 'Portfolio <onboarding@resend.dev>', 
-      to: 'claudioroberto0707@outlook.com', 
+    const data = await resend?.emails.send({
+      from: 'Portfolio <onboarding@resend.dev>',
+      to: 'claudioroberto0707@outlook.com',
       subject: `Contato do Portfólio - ${name}`,
       html: `
         <h3>Nova mensagem recebida do Portfólio</h3>
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     });
 
     return new Response(JSON.stringify({ success: true, data }), { status: 200 });
-} catch (error: any) {
+  } catch (error: any) {
     return new Response(JSON.stringify({ error: error.message }), { status: 500 });
 
   }
