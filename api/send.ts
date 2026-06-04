@@ -2,13 +2,15 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req: any, res: any) {
-  if (req.method !== 'POST') return res.status(405).end();
-
-  const { name, email, message } = req.body;
+export default async function handler(req: Request, res: Response) {
+  if (req.method !== 'POST') {
+    return new Response(JSON.stringify({ error: 'Method Not Allowed' }), { status: 405 });
+  }
 
   try {
-    await resend.emails.send({
+    const { name, email, message } = await req.json();
+
+    const data = await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>',
       to: ['claudiorobertof0707@gmail.com'],
       subject: `Contato de ${name}`,
@@ -16,8 +18,9 @@ export default async function handler(req: any, res: any) {
              <p><strong>Email:</strong> ${email}</p>
              <p><strong>Mensagem:</strong> ${message}</p>`,
     });
-    return res.status(200).json({ success: true });
+
+    return new Response(JSON.stringify({ success: true, data }), { status: 200 });
   } catch (error) {
-    return res.status(500).json({ error: 'Falha no envio' });
+    return new Response(JSON.stringify({ error: 'Falha no envio' }), { status: 500 });
   }
 }
