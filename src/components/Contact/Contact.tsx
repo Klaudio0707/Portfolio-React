@@ -12,7 +12,6 @@ const Contact = () => {
     } = useContactForm();
 
     return (
-
         <section className={styles.contactSection} id="contato">
             <div className={styles.container}>
                 <div className={styles.header}>
@@ -20,14 +19,16 @@ const Contact = () => {
                     <h2 className={styles.title}>Entre em Contato</h2>
                     <p className={styles.subtitle}>
                         Sinta-se à vontade para enviar uma mensagem. Estou sempre aberto a novas propostas,
-                        projetos desafiadores e conexões no mercado de engenharia de software.
+                        projetos desafiadores e conexões.
                     </p>
                 </div>
+
                 <form onSubmit={handleSubmit} className={styles.contactForm}>
                     <div className={styles.inputGroup}>
                         <label htmlFor="name">Nome</label>
                         <input
                             type="text"
+                            name="name"
                             id="name"
                             required
                             value={name}
@@ -35,32 +36,37 @@ const Contact = () => {
                             placeholder="Seu nome ou empresa"
                         />
                     </div>
-
                     <div className={styles.inputGroup}>
-                        <label htmlFor="email">E-mail</label>
+                        <label htmlFor="email">E-mail (opcional)</label>
                         <input
                             type="email"
+                            name="email" 
                             id="email"
-                            required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            placeholder="seu.email@exemplo.com"
+                            placeholder="seu.email@exemplo.com - Opcional"
                         />
                     </div>
 
+                    {/* Mensagem */}
                     <div className={styles.inputGroup}>
                         <label htmlFor="message">Mensagem</label>
                         <textarea
+                            name="message"
                             id="message"
                             required
                             rows={5}
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            placeholder="Descreva brevemente o seu projeto ou proposta..."
+                            placeholder="Descreva brevemente seu contato ou proposta"
                         />
                     </div>
 
-                    <button type="submit" disabled={isSubmitting} className={styles.btnSubmit}>
+                    <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className={styles.btnSubmit}
+                    >
                         {isSubmitting ? (
                             <>
                                 <Loader2 className={styles.spinner} size={18} />
@@ -76,7 +82,7 @@ const Contact = () => {
                 </form>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;
