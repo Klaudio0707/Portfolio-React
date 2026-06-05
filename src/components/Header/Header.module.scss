@@ -3,16 +3,16 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 5%; 
+  padding: 1rem 5%;
   background-color: rgba(5, 5, 5, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
-  
+
 
   position: fixed;
   top: 0;
-  z-index: 100; 
+  z-index: 100;
 
   .headerBrand {
     display: flex;
@@ -25,7 +25,7 @@
       text-decoration: none;
 
       .microAvatar {
-        width: 42px; 
+        width: 42px;
         height: 42px;
         border-radius: 50%;
         object-fit: cover;
@@ -47,6 +47,7 @@
         .microAvatar {
           transform: scale(1.05);
         }
+
         .logo {
           color: var(--color-pink);
         }
@@ -76,7 +77,7 @@
 
       &:hover {
         color: var(--text-main);
-        text-shadow: 0 0 8px rgba(255, 49, 140, 0.4); 
+        text-shadow: 0 0 8px rgba(255, 49, 140, 0.4);
       }
     }
   }
@@ -86,10 +87,10 @@
   .headerContainer {
     padding: 1rem;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     gap: 1.2rem;
-    
+
     .headerBrand {
       width: 100%;
       justify-content: center;
@@ -97,19 +98,19 @@
 
     .headerNavigation {
       width: 100%;
-      justify-content: center; 
-      
+      justify-content: center;
+
       nav {
-        width: 100%; 
+        width: 100%;
         display: flex;
         justify-content: center;
       }
-      
+
       ul {
         width: 100%;
-        justify-content: center; 
-        flex-wrap: wrap; 
-        gap: 1rem 1.5rem; 
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
       }
 
       .navLink {

@@ -17,7 +17,7 @@
     align-items: center;
     padding: 0.4rem 1rem;
     background-color: rgba(255, 49, 140, 0.1);
-    color: var(--color-pink); 
+    color: var(--color-pink);
     border: 1px solid rgba(255, 49, 140, 0.2);
     border-radius: 50px;
     font-size: 0.85rem;
@@ -69,11 +69,16 @@
     transform: scale(1.1);
   }
 
-  &.leftBtn { left: -24px; }
-  &.rightBtn { right: -24px; }
+  &.leftBtn {
+    left: -24px;
+  }
+
+  &.rightBtn {
+    right: -24px;
+  }
 
   @media (max-width: 768px) {
-    display: none; 
+    display: none;
   }
 }
 
@@ -83,17 +88,20 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  padding: 1rem 0 3rem 0; 
+  padding: 1rem 0 3rem 0;
   width: 100%;
 
-  scrollbar-width: none; 
-  &::-webkit-scrollbar { display: none; }
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .projectCard {
-  flex: 0 0 340px; 
+  flex: 0 0 340px;
   scroll-snap-align: start;
-  
+
   display: flex;
   flex-direction: column;
   background-color: var(--bg-card-dark);
@@ -111,9 +119,9 @@
   }
 
   &.isFeatured {
-    border-color: var(--color-purple); 
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.25); 
-    
+    border-color: var(--color-purple);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
+
     .imageWrapper::after {
       content: '';
       position: absolute;
@@ -173,12 +181,12 @@
   }
 
   &.completed .pulse {
-    background-color: #10b981; 
+    background-color: #10b981;
     box-shadow: 0 0 12px rgba(16, 185, 129, 0.8);
   }
 
   &.in-progress .pulse {
-    background-color: #f59e0b; 
+    background-color: #f59e0b;
     box-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
     animation: pulseAnim 2s infinite;
   }
@@ -188,7 +196,7 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  flex: 1; 
+  flex: 1;
 }
 
 .mainInfo {
@@ -196,7 +204,7 @@
 
   .highlight {
     font-size: 0.75rem;
-    color: var(--color-pink); 
+    color: var(--color-pink);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -213,7 +221,7 @@
     color: var(--text-muted);
     font-size: 0.9rem;
     line-height: 1.6;
-    
+
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
@@ -222,7 +230,7 @@
 }
 
 .cardFooter {
-  margin-top: auto; 
+  margin-top: auto;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -262,9 +270,9 @@
 
 .cardActions {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   gap: 0.6rem;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 
   a {
     display: inline-block;
@@ -278,10 +286,10 @@
   }
 
   .btnDeploy {
-    background: var(--brand-gradient); 
+    background: var(--brand-gradient);
     color: #ffffff;
     box-shadow: 0 4px 14px rgba(255, 49, 140, 0.2);
-    
+
     &:hover {
       filter: brightness(1.15);
       transform: translateY(-2px);
@@ -303,30 +311,42 @@
 }
 
 @keyframes pulseAnim {
-  0% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.2); }
-  100% { opacity: 1; transform: scale(1); }
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
+
 @media (max-width: 768px) {
   .projectsSection {
-    padding: 4rem 1rem; 
+    padding: 4rem 1rem;
   }
 
   .carouselTrack {
-    gap: 1.2rem; 
+    gap: 1.2rem;
     padding: 1rem 0 2rem 0;
   }
 
   .projectCard {
-    flex: 0 0 85vw; 
-    max-width: 340px; 
+    flex: 0 0 85vw;
+    max-width: 340px;
   }
 
   .header {
     margin-bottom: 2.5rem;
-    
+
     .title {
-      font-size: 2.2rem; 
+      font-size: 2.2rem;
     }
   }
 }
@@ -335,14 +355,17 @@
   .content {
     padding: 1.2rem;
   }
+
   .cardFooter {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .cardActions {
     width: 100%;
     margin-top: 0.5rem;
   }
+
   .cardActions a {
     flex: 1;
   }

@@ -1,4 +1,3 @@
-// src/components/Hero/Hero.tsx
 import { toast } from 'sonner';
 import styles from './Hero.module.scss';
 import { renderTechIcon } from '../../utils/renderTechIcon';
@@ -6,7 +5,7 @@ import { useScrollVisibility } from '../../hooks/useScrollVisibility';
 
 export const Hero = () => {
   const isScrolled = useScrollVisibility(50);
-  
+
   const handleCopyContact = async (e: React.MouseEvent) => {
     e.preventDefault();
     try {
@@ -20,19 +19,19 @@ export const Hero = () => {
   return (
     <section className={styles.heroSection} id="home">
       <div className={styles.heroGrid}>
-        
+
         <div className={styles.textContent}>
           <span className={styles.greeting}>Olá, meu nome é Cláudio Roberto</span>
           <h1 className={styles.title}>
             Desenvolvedor de Software
           </h1>
           <p className={styles.bio}>
-            Natural do Recife e graduado em Análise e Desenvolvimento de Sistemas. 
-            Minha trajetória une a lógica rigorosa das operações logísticas corporativas 
-            com a engenharia de software limpa. Atualmente, dedico-me a arquitetar e 
+            Natural do Recife e graduado em Análise e Desenvolvimento de Sistemas.
+            Minha trajetória une a lógica rigorosa das operações logísticas corporativas
+            com a engenharia de software limpa. Atualmente, dedico-me a arquitetar e
             escalar soluções robustas utilizando <strong>Java, Spring Boot, Angular e React</strong>.
           </p>
-          
+
           <div className={styles.actionButtons}>
             <a href="/CV_Claudio_Roberto.pdf" download className={styles.btnPrimary}>
               Baixar CV
@@ -49,7 +48,7 @@ export const Hero = () => {
         <div className={styles.visualContent}>
           <div className={styles.techConstellation}>
             <div className={styles.glowRing}></div>
-            
+
             <div className={`${styles.techBadge} ${styles.pos1}`}>{renderTechIcon('Java')}</div>
             <div className={`${styles.techBadge} ${styles.pos2}`}>{renderTechIcon('Spring Boot')}</div>
             <div className={`${styles.techBadge} ${styles.pos3}`}>{renderTechIcon('Google')}</div>
@@ -60,8 +59,8 @@ export const Hero = () => {
         </div>
       </div>
 
-      <a 
-        href="#sobre" 
+      <a
+        href="#sobre"
         className={`${styles.scrollIndicator} ${isScrolled ? styles.hidden : ''}`}
         aria-label="Rolar para a seção sobre"
       >

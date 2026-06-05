@@ -1,32 +1,63 @@
 # 💻 Portfólio de Engenharia de Software
-Bem-vindo ao repositório do meu portfólio pessoal. Este projeto não é apenas uma vitrine visual, mas uma demonstração prática dos meus princípios de arquitetura de frontend, focado em performance, componentização e Clean Code.
+
+![Status do Projeto](https://img.shields.io/badge/status-active-brightgreen)
+![Tecnologias](https://img.shields.io/badge/stack-React-blue)
+
+Bem-vindo ao repositório do meu portfólio pessoal. Este projeto é uma vitrine de boas práticas em arquitetura de frontend, focado em **performance**, **manutenibilidade** e **Clean Code**.
+
+---
 
 ## 🚀 Sobre Mim
 
-Sou **Cláudio Roberto **, um Desenvolvedor Fullstack baseado no Recife, Pernambuco. Com uma base sólida em Análise e Desenvolvimento de Sistemas e uma trajetória que une a precisão das operações logísticas corporativas à engenharia de software, dedico-me a construir aplicações robustas, testáveis e escaláveis.
+Sou **Cláudio Roberto da Silva**, Desenvolvedor Software. Com base em Análise e Desenvolvimento de Sistemas e experiência em logística, aplico o rigor técnico e a otimização de processos para criar aplicações robustas.
 
-Minha stack principal de atuação engloba **Java, Spring Boot, Angular e React**.
+Stack principal: **Java, Spring Boot, Angular, Typescript/Javascript e React**.
 
-## 🏗️ Arquitetura e Decisões Técnicas
+---
 
-Este portfólio foi arquitetado em **React com TypeScript**, priorizando as seguintes abordagens de engenharia:
+## 🏗️ Decisões de Arquitetura
 
-* **Design Tokens e CSS Modules:** Todo o sistema de "Glow Dark Theme" é guiado por variáveis globais de CSS (`:root`), consumidas através de SCSS Modules para evitar colisão de escopo e garantir escalabilidade (Single Source of Truth).
-* **Custom Hooks (Separation of Concerns):** A lógica de negócios e os eventos de janela (como o motor de rolagem infinita de carrosséis e o monitoramento de scroll) foram extraídos para Hooks isolados (`useCarousel`, `useScrollVisibility`), mantendo os componentes visuais estritamente focados em renderização de UI.
-* **Componentização Semântica:** Uso de mapeadores utilitários como o `renderTechIcon` integrado à CDN do *Devicon* para renderização assíncrona de gráficos vetoriais pesados (SVGs), reduzindo o bundle size final da aplicação.
-* **Foco em Microinterações (UX):** Implementação de feedbacks táteis imediatos com `useToast` e tratamento inteligente de overflow em layouts reativos.
+O projeto utiliza **React + TypeScript**, priorizando padrões de engenharia:
 
-## ⚙️ Funcionalidades em Destaque
+* **Separation of Concerns:** Lógica de negócio isolada em **Custom Hooks** (`useContactForm`, `useCarousel`).
+* **Design System:** Uso de *CSS Modules* com variáveis de tema (`:root`), garantindo Single Source of Truth.
+* **Segurança e Estabilidade:** Roteamento SPA otimizado para Vercel e sistema de *Rate Limiting* (client-side) para proteção do formulário de contato.
+* **Performance:** Integração assíncrona de recursos e redução de bundle size.
 
-- Layout responsivo baseado em Grid e Flexbox modernos.
-- Carrossel horizontal com matemática de *scroll-snap* customizada.
-- Motor de navegação reativo que monitora o eixo Y para controle de estado.
-- Integração fluida entre UI Components e base de dados estática tipada.
+---
 
-## 🛠️ Como Executar Localmente
+## ⚙️ Funcionalidades
 
-Certifique-se de ter o Node.js instalado em sua máquina.
+- **UX Responsiva:** Layout flexível com Grid/Flexbox moderno.
+- **Motor de Scroll:** Navegação horizontal fluida com *scroll-snap*.
+- **Formulário Seguro:** Integração com Web3Forms, contendo trava de segurança de 3 envios a cada 24h.
+- **Microinterações:** Feedbacks táteis e visuais via `Sonner`.
 
-1. Clone o repositório:
+---
+
+## 🛠️ Como Executar
+
+1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/Klaudio0707/Portfolio-React](https://github.com/Klaudio0707/Portfolio-React)
+   git clone [https://github.com/Klaudio0707/Portfolio-React.git](https://github.com/Klaudio0707/Portfolio-React.git)
+Entre na pasta:
+
+Bash
+cd Portfolio-React
+Instale as dependências:
+
+Bash
+npm install
+Variáveis de Ambiente:
+Crie um arquivo .env na raiz e adicione:
+
+Snippet de código
+VITE_WEB3FORMS_ACCESS_KEY=sua_chave_aqui
+Inicie o projeto:
+
+Bash
+npm run dev
+📬 Contato
+Sinta-se à vontade para enviar uma mensagem através do formulário ou conectar-se no LinkedIn.
+
+Desenvolvido com dedicação por Cláudio Roberto.

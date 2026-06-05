@@ -40,7 +40,7 @@ const Contact = () => {
                         <label htmlFor="email">E-mail (opcional)</label>
                         <input
                             type="email"
-                            name="email" 
+                            name="email"
                             id="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}

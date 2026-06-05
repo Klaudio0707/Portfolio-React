@@ -6,7 +6,7 @@ import { useCarousel } from '../../hooks/useCarousel';
 const About = () => {
 
     const { trackRef, handleScroll } = useCarousel(320);
-        
+
     return (
         <section className={styles.aboutContainer} id="sobre">
             <div className={styles.header}>
@@ -44,7 +44,7 @@ const About = () => {
                     aria-label="Rolar para a direita">
                     <ChevronRight size={24} />
                 </button>
-                
+
             </div>
         </section>
     );

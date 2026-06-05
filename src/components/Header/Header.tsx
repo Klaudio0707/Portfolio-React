@@ -10,7 +10,7 @@ export const Header = () => {
           <h1 className={styles.logo}>Cláudio Roberto</h1>
         </a>
       </div>
-      
+
       <div className={styles.headerNavigation}>
         <nav>
           <ul>
