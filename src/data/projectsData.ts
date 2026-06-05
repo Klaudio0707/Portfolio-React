@@ -1,10 +1,10 @@
-import Thecomex from '@assets/projects/TheGlobal.JPG';
-import PartyTime from '@assets/projects/PartyTime.JPG';
-import ImportControl from '@assets/projects/ImportControl.JPG';
-import MailSense from '@assets/projects/MailSense.JPG';
-import CineTascom from '@assets/projects/CineTascom.JPG';
-import Fintech from '@assets/projects/Fintech.JPG';
-import BusPay from '@assets/projects/Figma-BusPay.JPG';
+import Thecomex from '@/assets/projects/theglobal.JPG';
+import PartyTime from '@/assets/projects/partytime.JPG';
+import ImportControl from '@/assets/projects/importcontrol.JPG';
+import MailSense from '@/assets/projects/mailsense.JPG';
+import CineTascom from '@/assets/projects/cinetascom.JPG';
+import Fintech from '@/assets/projects/fintech.JPG';
+import BusPay from '@/assets/projects/figmabuspay.JPG';
 
 export interface ProjectData {
   id: number;
