@@ -2,38 +2,68 @@ import { useState, type FormEvent } from 'react';
 import { toast } from 'sonner';
 
 export const useContactForm = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [isSubmitting, setIsSubmitting] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setIsSubmitting(true);
+const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  
+  const now = Date.now();
+  const STORAGE_KEY = 'contact_form_data';
+  const COOLDOWN = 24 * 60 * 60 * 1000; 
 
-        try {
-            const response = await fetch('/api/send', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, message }),
-            });
-            if (!response.ok) throw new Error('Erro ao processar envio do formulário.');
-             toast.success('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-            setName('');
-            setEmail('');
-            setMessage('');
-        } catch (err) {
-            toast.error('Falha ao enviar a mensagem. Verifique sua conexão e tente novamente.');
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
+  const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{"count": 0, "blockedUntil": 0}');
 
-    return {
-        name, setName,
-        email, setEmail,
-        message, setMessage,
-        isSubmitting,
-        handleSubmit
-    };
+  if (data.blockedUntil > now) {
+    toast.error("Limite atingido. Tente novamente após 24 horas.");
+    return;
+  }
+
+  if (data.blockedUntil !== 0 && data.blockedUntil <= now) {
+    data.count = 0;
+    data.blockedUntil = 0;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      data.count += 1;
+      if (data.count >= 3) {
+        data.blockedUntil = now + COOLDOWN;
+        toast.success("Mensagem enviada! Você atingiu o limite de 3 envios. Volte em 24h.");
+      } else {
+        toast.success(`Mensagem enviada! (${data.count}/3 envios).`);
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      setName(''); setEmail(''); setMessage('');
+    } else {
+      throw new Error(result.message);
+    }
+  } catch (err) {
+    toast.error("Falha ao enviar.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+  return {
+    name, setName,
+    email, setEmail,
+    message, setMessage,
+    isSubmitting,
+    handleSubmit
+  } as const; 
 };
