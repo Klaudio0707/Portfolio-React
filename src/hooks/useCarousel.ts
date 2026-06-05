@@ -1,31 +1,58 @@
-import { useRef } from 'react';
+import { useRef, useState, type MouseEvent } from 'react';
 
-/**
- * @param scrollAmount Distância em pixels que o carrossel deve andar por clique.
- * @param tolerance Margem de segurança para arredondamento de pixels dos navegadores.
- */
-
-export const useCarousel = (scrollAmount: number = 372, tolerance: number = 10) => {
+export const useCarousel = (scrollAmount: number = 320) => {
   const trackRef = useRef<HTMLDivElement>(null);
+
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   const handleScroll = (direction: 'left' | 'right') => {
-    if (!trackRef.current) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = trackRef.current;
-
-    if (direction === 'left') {
-      if (scrollLeft <= tolerance) {
-        trackRef.current.scrollTo({ left: scrollWidth, behavior: 'smooth' });
-      } else {
-        trackRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-      }
-    } else {
-      if (scrollLeft + clientWidth >= scrollWidth - tolerance) {
-        trackRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        trackRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
+    if (trackRef.current) {
+      const newScrollPosition = trackRef.current.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount);
+      trackRef.current.scrollTo({
+        left: newScrollPosition,
+        behavior: 'smooth',
+      });
     }
   };
 
-  return { trackRef, handleScroll };
+  const handleMouseDown = (e: MouseEvent<HTMLDivElement>) => {
+    if (!trackRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - trackRef.current.offsetLeft);
+    setScrollLeft(trackRef.current.scrollLeft);
+
+    trackRef.current.style.scrollBehavior = 'auto';
+    trackRef.current.style.scrollSnapType = 'none';
+  };
+
+  const handleMouseLeaveOrUp = () => {
+    setIsDragging(false);
+    if (trackRef.current) {
+      trackRef.current.style.scrollBehavior = 'smooth';
+      trackRef.current.style.scrollSnapType = 'x proximity';
+    }
+  };
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (!isDragging || !trackRef.current) return;
+    e.preventDefault(); 
+    
+    const x = e.pageX - trackRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5; 
+   
+    trackRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  return {
+    trackRef,
+    handleScroll,
+    dragEvents: {
+      onMouseDown: handleMouseDown,
+      onMouseLeave: handleMouseLeaveOrUp,
+      onMouseUp: handleMouseLeaveOrUp,
+      onMouseMove: handleMouseMove,
+    }
+  } as const;
 };

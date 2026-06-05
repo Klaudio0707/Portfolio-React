@@ -5,7 +5,7 @@ import { useCarousel } from '../../hooks/useCarousel';
 
 const About = () => {
 
-    const { trackRef, handleScroll } = useCarousel(320);
+    const { trackRef, handleScroll, dragEvents } = useCarousel(350);
 
     return (
         <section className={styles.aboutContainer} id="sobre">
@@ -23,7 +23,7 @@ const About = () => {
                     <ChevronLeft size={24} />
                 </button>
 
-                <div className={styles.carouselTrack} ref={trackRef}>
+                <div className={styles.carouselTrack} ref={trackRef} {...dragEvents}>
                     {galleryData.map((item) => (
                         <article key={item.id} className={styles.carouselCard}>
                             <div className={styles.imageContainer}>

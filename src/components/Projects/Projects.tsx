@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const Projects = () => {
 
-    const { trackRef, handleScroll } = useCarousel(372);
+   const { trackRef, handleScroll, dragEvents } = useCarousel(350);
 
     return (
         <section className={styles.projectsSection} id="projetos">
@@ -25,7 +25,7 @@ export const Projects = () => {
                 >
                     <ChevronLeft size={24} />
                 </button>
-                <div className={styles.carouselTrack} ref={trackRef}>
+                <div className={styles.carouselTrack} ref={trackRef} {...dragEvents}>
                     {projectsData.map((project) => (
                         <article
                             key={project.id}
