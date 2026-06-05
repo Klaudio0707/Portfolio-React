@@ -5,9 +5,7 @@ import { Hero } from './components/Hero/Hero'
 import { Toaster } from './ui/Toaster'
 import Contact from './components/Contact/Contact'
 
-
 function App() {
-
 
   return (
     <>
