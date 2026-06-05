@@ -6,6 +6,8 @@ import CineTascom from '@/assets/projects/cinetascom.jpg';
 import Fintech from '@/assets/projects/fintech.jpg';
 import BusPay from '@/assets/projects/figmabuspay.jpg';
 
+
+
 export interface ProjectData {
   id: number;
   title: string;
