@@ -49,7 +49,7 @@ export const Projects = () => {
                                 <div className={styles.cardFooter}>
                                     <div className={styles.techStack}>
                                         {project.techStack.slice(0, 3).map((tech) => (
-                                            <span key={tech} className={styles.techBadge}>
+                                           <span translate="no" className={styles.techBadge}>
                                                 {renderTechIcon(tech)}
                                                 {tech}
                                             </span>
