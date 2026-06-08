@@ -341,44 +341,65 @@ display: flex;
 
 @media (max-width: 768px) {
   .projectsSection {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem; 
   }
 
   .carouselTrack {
-    gap: 1.2rem;
+    gap: 1rem;
     padding: 1rem 0 2rem 0;
+    
+    touch-action: auto; 
   }
 
   .projectCard {
-    flex: 0 0 85vw;
-    max-width: 340px;
+    flex: 0 0 85vw; 
+    max-width: 320px; 
   }
 
-  .header {
-    margin-bottom: 2.5rem;
-
-    .title {
-      font-size: 2.2rem;
-    }
+  .imageWrapper {
+    height: 160px; 
   }
-}
 
-@media (max-width: 380px) {
   .content {
     padding: 1.2rem;
   }
 
-  .cardFooter {
-    flex-direction: column;
-    align-items: flex-start;
+  .mainInfo {
+    margin-bottom: 1rem;
+
+    h3 {
+      font-size: 1.15rem; 
+      margin: 0.3rem 0 0.5rem;
+    }
+
+    .motive {
+      font-size: 0.85rem;
+      
+     
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
 
-  .cardActions {
-    width: 100%;
-    margin-top: 0.5rem;
+  .techStack {
+    .techBadge {
+      padding: 0.2rem 0.5rem;
+      font-size: 0.65rem;
+    }
   }
 
   .cardActions a {
-    flex: 1;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+
+    .title {
+      font-size: 2rem;
+    }
   }
 }
