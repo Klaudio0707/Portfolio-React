@@ -28,7 +28,7 @@ export const projectsData: ProjectData[] = [
     keyHighlight: 'Internacionalização & Credibilidade B2B',
     techStack: ['React', 'TypeScript', 'CSS', 'Cloudflare'],
     status: 'completed',
-    motive: 'Plataforma B2B para o setor de comércio exterior com suporte a múltiplos idiomas e atualizações em tempo real. Interface React + TypeScript com polling assíncrono e arquitetura de estado desacoplada para operações críticas 24/7.',
+    motive: 'Landing page institucional e de conversão para o setor de Comércio Exterior. (O Impacto): Maximizou a presença digital da marca com foco em captação de leads e tempo de carregamento otimizado. (A Engenharia): Desenvolvida com React e TypeScript, focando em componentização limpa e tipagem estrita, com a esteira de CI/CD e distribuição global servidas através da infraestrutura de edge da Cloudflare.',
     image: Thecomex,
     deployUrl: 'https://thecomex-deploy.com.br', 
     githubUrl: 'https://github.com/Klaudio0707/landing-b2b',
