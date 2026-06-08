@@ -23,27 +23,23 @@ export const Hero = () => {
         <div className={styles.textContent}>
           <span className={styles.greeting}>Olá, meu nome é Cláudio Roberto</span>
           <h1 className={styles.title}>
-            Desenvolvedor de Software
+            Engenheiro Full Stack · <span translate="no">Java</span>, <span translate="no">Spring Boot</span>, <span translate="no">Angular</span> e <span translate="no">React</span>.
           </h1>
           <p className={styles.bio}>
-            Natural do Recife e graduado em Análise e Desenvolvimento de Sistemas.
-            Minha trajetória une a lógica rigorosa das operações logísticas corporativas
-            com a engenharia de software limpa. Atualmente, dedico-me a arquitetar e
-            escalar soluções robustas utilizando <strong>Java, Spring Boot, Angular e React</strong>.
+            +7 anos unindo operações reais de negócio com engenharia de software limpa. 
+            Construo APIs robustas em Java/Spring Boot e interfaces modernas em React e Angular — do backend escalável até o último pixel do frontend. 
           </p>
 
           <div className={styles.actionButtons}>
-            <a href="/CV_Claudio_Roberto.pdf" download className={styles.btnPrimary}>
+            <a href="/CV_ClaudioRoberto.pdf" download className={styles.btnPrimary}>
               Baixar CV
             </a>
             <a href="#contact" onClick={handleCopyContact} className={styles.btnOutline}>
               Email
             </a>
-            <a href="#projects" className={styles.btnOutline}>
-              Ver Projetos
-            </a>
           </div>
         </div>
+        
 
         <div className={styles.visualContent}>
           <div className={styles.techConstellation}>

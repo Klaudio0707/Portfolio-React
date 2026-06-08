@@ -18,6 +18,7 @@
   align-items: center;
 }
 
+
 .textContent {
   display: flex;
   flex-direction: column;
@@ -149,6 +150,7 @@
     animation: float 5.5s ease-in-out infinite 2s; 
   }
 }
+
 
 @keyframes pulseGlow {
   0% { opacity: 0.1; transform: scale(0.9); }

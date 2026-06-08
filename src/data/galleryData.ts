@@ -14,14 +14,14 @@ export interface GalleryEvent {
 export const galleryData: GalleryEvent[] = [
     {
         id: 1,
-        title: 'Desenvolvedor de Sistemas(IFPE - Porto Digital)',
+        title: 'Programador de Sistemas · IFPE + Porto Digital (2017)',
         context: 'Ecossistema Porto Digital',
-        description: 'Conclusão do curso de Programadores de Sistema em 2017. O marco zero da minha jornada, fundamentando a lógica de programação com o valioso apoio do polo tecnológico de Recife.',
+        description: 'Base da minha jornada técnica. Aprendi lógica de programação no ecossistema tecnológico de Recife, com apoio do maior hub de inovação do Nordeste.',
         image: ProgramadoresSistIfpe,
     },
     {
         id: 2,
-        title: 'Imersão em Infraestrutura',
+        title: 'Fundamentos de Hardware & Redes',
         context: 'Grau Técnico',
         description: 'Início da formação como Técnico em Informática em 2019. Uma etapa crucial para aprofundar o entendimento sobre redes, sistemas operacionais e os alicerces do hardware e software.',
         image: CursoGrauTecnico,
