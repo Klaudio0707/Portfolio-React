@@ -2,14 +2,8 @@ import ApresentacaoProjeto from '@/assets/gallery/apresentacao.jpeg';
 import CursoGrauTecnico from '@/assets/gallery/grautecnico.jpeg';
 import GrupoTascom from '@/assets/gallery/tascom.jpeg';
 import ProgramadoresSistIfpe from '@/assets/gallery/ifpe.jpeg';
+import type { GalleryEvent } from '@/types/galery';
 
-export interface GalleryEvent {
-    id: number;
-    title: string;
-    context: string;
-    description: string;
-    image: string;
-}
 
 export const galleryData: GalleryEvent[] = [
     {
