@@ -26,25 +26,24 @@ export const Hero = () => {
             Engenheiro Full Stack · <span translate="no">Java</span>, <span translate="no">Spring Boot</span>, <span translate="no">Angular</span> e <span translate="no">React</span>.
           </h1>
           <p className={styles.bio}>
-            +7 anos unindo operações reais de negócio com engenharia de software limpa. 
-            Construo APIs robustas em Java/Spring Boot e interfaces modernas em React e Angular — do backend escalável até o último pixel do frontend. 
+            +7 anos unindo operações reais de negócio com engenharia de software limpa.
+            Construo APIs robustas em Java/Spring Boot e interfaces modernas em React e Angular — do backend escalável até o último pixel do frontend.
           </p>
 
           <div className={styles.actionButtons}>
             <a href="/CV_ClaudioRoberto.pdf" download className={styles.btnPrimary}>
               Baixar CV
             </a>
-            <a href="#contact" onClick={handleCopyContact} className={styles.btnOutline}>
-              Email
-            </a>
+            <button onClick={handleCopyContact} className={styles.btnOutline} type="button">
+              Copiar Email
+            </button>
           </div>
         </div>
-        
+
 
         <div className={styles.visualContent}>
           <div className={styles.techConstellation}>
             <div className={styles.glowRing}></div>
-
             <div className={`${styles.techBadge} ${styles.pos1}`}>{renderTechIcon('Java')}</div>
             <div className={`${styles.techBadge} ${styles.pos2}`}>{renderTechIcon('Spring Boot')}</div>
             <div className={`${styles.techBadge} ${styles.pos3}`}>{renderTechIcon('Google')}</div>
