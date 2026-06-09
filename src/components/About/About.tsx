@@ -8,7 +8,7 @@ const About = () => {
     const { trackRef, handleScroll, dragEvents } = useCarousel(350);
 
     return (
-        <section className={styles.aboutContainer} id="sobre">
+        <section className={styles.aboutContainer} id="about">
             <div className={styles.header}>
                 <span className={styles.sectionBadge}>Minha Trajetória</span>
                 <h2 className={styles.title}>De 2017 ao Código Limpo</h2>

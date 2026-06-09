@@ -12,7 +12,7 @@ const Contact = () => {
     } = useContactForm();
 
     return (
-        <section className={styles.contactSection} id="contato">
+        <section className={styles.contactSection} id="contact">
             <div className={styles.container}>
                 <div className={styles.header}>
                     <span className={styles.badge}>Contato</span>
