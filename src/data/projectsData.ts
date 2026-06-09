@@ -5,23 +5,10 @@ import MailSense from '@/assets/projects/mailsense.jpg';
 import CineTascom from '@/assets/projects/cinetascom.jpg';
 import Fintech from '@/assets/projects/fintech.jpg';
 import BusPay from '@/assets/projects/figmabuspay.jpg';
+import type { Project } from '@/types/project';
 
 
-
-export interface ProjectData {
-  id: number;
-  title: string;
-  keyHighlight: string; 
-  techStack: string[];
-  status: 'completed' | 'in-progress';
-  motive: string;
-  image: string;
-  deployUrl?: string;
-  githubUrl?: string;
-  featured?: boolean;
-}
-
-export const projectsData: ProjectData[] = [
+export const projectsData: Project[] = [
   {
     id: 1,
     title: 'TheGlobal (Thecomex)',
