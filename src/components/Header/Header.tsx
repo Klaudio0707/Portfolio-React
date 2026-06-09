@@ -7,7 +7,7 @@ export const Header = () => {
       <div className={styles.headerBrand}>
         <a href="#home" className={styles.logoGroup}>
           <img src={fotoPerfil} alt="Cláudio Roberto" className={styles.microAvatar} />
-          <h1 className={styles.logo}>Cláudio Roberto</h1>
+          <span translate="no" className={styles.logo}>Cláudio Roberto</span>
         </a>
       </div>
 
