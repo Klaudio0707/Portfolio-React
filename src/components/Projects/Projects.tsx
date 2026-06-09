@@ -8,7 +8,7 @@ export const Projects = () => {
     const { trackRef, handleScroll, dragEvents } = useCarousel(350);
 
     return (
-        <section className={styles.projectsSection} id="projetos">
+        <section className={styles.projectsSection} id="project">
             <div className={styles.header}>
                 <span className={styles.badge}>Portfólio</span>
                 <h2 className={styles.title}>Engenharia em Prática</h2>

@@ -4,6 +4,7 @@ import {Header} from './components/Header/Header'
 import { Hero } from './components/Hero/Hero'
 import { Toaster } from './ui/Toaster'
 import Contact from './components/Contact/Contact'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Projects />
       <Contact/>
+      <Footer /> 
     </>
   )
 }
