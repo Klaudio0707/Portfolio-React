@@ -42,6 +42,7 @@ const Contact = () => {
                             type="email"
                             name="email"
                             id="email"
+                            required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="seu.email@exemplo.com - Opcional"

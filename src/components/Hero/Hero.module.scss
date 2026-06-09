@@ -58,7 +58,7 @@
   gap: 1rem;
   margin-top: 1rem;
 
-  a {
+  a, button {
     padding: 0.8rem 1.8rem;
     border-radius: 8px;
     font-weight: 600;
@@ -86,6 +86,7 @@
     &:hover {
       background: rgba(255, 255, 255, 0.05);
       border-color: var(--color-pink); 
+      cursor:pointer;
     }
   }
 }
@@ -116,6 +117,7 @@
     animation: pulseGlow 4s infinite alternate;
   }
 }
+
 
 .techBadge {
   position: absolute;

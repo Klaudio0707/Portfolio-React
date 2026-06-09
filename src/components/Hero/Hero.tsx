@@ -34,6 +34,7 @@ export const Hero = () => {
             <a href="/CV_ClaudioRoberto.pdf" download className={styles.btnPrimary}>
               Baixar CV
             </a>
+
             <button onClick={handleCopyContact} className={styles.btnOutline} type="button">
               Copiar Email
             </button>

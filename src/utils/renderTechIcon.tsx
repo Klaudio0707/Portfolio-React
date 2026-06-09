@@ -32,7 +32,7 @@ export const renderTechIcon = (tech: string) => {
     return (
       <img 
         src={iconUrl} 
-        alt={`Ícone da tecnologia ${tech}`} 
+        alt="" aria-hidden="true" 
         style={{ width: '1.2em', height: '1.2em', objectFit: 'contain' }} 
         loading="lazy"
       />

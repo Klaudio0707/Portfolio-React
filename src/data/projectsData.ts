@@ -38,7 +38,7 @@ export const projectsData: ProjectData[] = [
     id: 2,
     title: 'PartyTime',
     keyHighlight: 'Gestão Financeira & Polling Logic',
-    techStack: ['React', 'Nestjs', 'TypeScript', 'Neon DB', 'Postgress', 'Resend'],
+    techStack: ['React', 'NestJS', 'TypeScript', 'Neon DB', 'PostgreSQL', 'Resend'],
     status: 'completed',
     motive: 'Plataforma SaaS para gestão de despesas de festas e orquestração de convites. O diferencial de engenharia é a implementação de uma lógica robusta de polling no frontend, mantendo o controle de gastos e respostas atualizados em tempo real na tela do usuário.',
     image: PartyTime,

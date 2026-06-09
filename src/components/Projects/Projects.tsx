@@ -5,18 +5,16 @@ import { useCarousel } from '../../hooks/useCarousel';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const Projects = () => {
-
-   const { trackRef, handleScroll, dragEvents } = useCarousel(350);
+    const { trackRef, handleScroll, dragEvents } = useCarousel(350);
 
     return (
-        <section className={styles.projectsSection} id="projects">
+        <section className={styles.projectsSection} id="projetos">
             <div className={styles.header}>
                 <span className={styles.badge}>Portfólio</span>
                 <h2 className={styles.title}>Engenharia em Prática</h2>
             </div>
 
             <div className={styles.carouselWrapper}>
-
                 {/* Botão de Controle Esquerdo */}
                 <button
                     className={`${styles.navButton} ${styles.leftBtn}`}
@@ -25,7 +23,19 @@ export const Projects = () => {
                 >
                     <ChevronLeft size={24} />
                 </button>
-                <div className={styles.carouselTrack} ref={trackRef} {...dragEvents}>
+
+                <div
+                    className={styles.carouselTrack}
+                    ref={trackRef}
+                    {...dragEvents}
+                    tabIndex={0}
+                    role="region"
+                    aria-label="Carrossel de projetos"
+                    onKeyDown={(e) => {
+                        if (e.key === 'ArrowLeft') handleScroll('left');
+                        if (e.key === 'ArrowRight') handleScroll('right');
+                    }}
+                >
                     {projectsData.map((project) => (
                         <article
                             key={project.id}
@@ -49,7 +59,7 @@ export const Projects = () => {
                                 <div className={styles.cardFooter}>
                                     <div className={styles.techStack}>
                                         {project.techStack.slice(0, 3).map((tech) => (
-                                           <span translate="no" className={styles.techBadge}>
+                                            <span key={tech} translate="no" className={styles.techBadge}>
                                                 {renderTechIcon(tech)}
                                                 {tech}
                                             </span>
@@ -82,7 +92,6 @@ export const Projects = () => {
                 >
                     <ChevronRight size={24} />
                 </button>
-
             </div>
         </section>
     );

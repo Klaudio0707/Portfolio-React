@@ -1,58 +1,50 @@
-import { useRef, useState, type MouseEvent } from 'react';
+import { useRef, type MouseEvent } from 'react';
 
-export const useCarousel = (scrollAmount: number = 320) => {
+export const useCarousel = (scrollAmount: number = 350) => {
   const trackRef = useRef<HTMLDivElement>(null);
-
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const isDragging = useRef(false); 
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
 
   const handleScroll = (direction: 'left' | 'right') => {
     if (trackRef.current) {
-      const newScrollPosition = trackRef.current.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount);
+      const scrollPos = trackRef.current.scrollLeft;
       trackRef.current.scrollTo({
-        left: newScrollPosition,
-        behavior: 'smooth',
+        left: direction === 'left' ? scrollPos - scrollAmount : scrollPos + scrollAmount,
+        behavior: 'smooth'
       });
     }
   };
 
-  const handleMouseDown = (e: MouseEvent<HTMLDivElement>) => {
+  const onMouseDown = (e: MouseEvent) => {
+    isDragging.current = true;
     if (!trackRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - trackRef.current.offsetLeft);
-    setScrollLeft(trackRef.current.scrollLeft);
-
-    trackRef.current.style.scrollBehavior = 'auto';
-    trackRef.current.style.scrollSnapType = 'none';
+    startX.current = e.pageX - trackRef.current.offsetLeft;
+    scrollLeft.current = trackRef.current.scrollLeft;
+    trackRef.current.style.cursor = 'grabbing';
   };
 
-  const handleMouseLeaveOrUp = () => {
-    setIsDragging(false);
+  const onMouseLeaveOrUp = () => {
+    isDragging.current = false;
     if (trackRef.current) {
-      trackRef.current.style.scrollBehavior = 'smooth';
-      trackRef.current.style.scrollSnapType = 'x proximity';
+      trackRef.current.style.cursor = 'grab';
     }
   };
 
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (!isDragging || !trackRef.current) return;
-    e.preventDefault(); 
-    
+  const onMouseMove = (e: MouseEvent) => {
+    if (!isDragging.current || !trackRef.current) return;
+    e.preventDefault();
     const x = e.pageX - trackRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; 
-   
-    trackRef.current.scrollLeft = scrollLeft - walk;
+    const walk = (x - startX.current) * 2; 
+    trackRef.current.scrollLeft = scrollLeft.current - walk;
   };
 
-  return {
-    trackRef,
-    handleScroll,
-    dragEvents: {
-      onMouseDown: handleMouseDown,
-      onMouseLeave: handleMouseLeaveOrUp,
-      onMouseUp: handleMouseLeaveOrUp,
-      onMouseMove: handleMouseMove,
-    }
-  } as const;
+  const dragEvents = {
+    onMouseDown,
+    onMouseLeave: onMouseLeaveOrUp,
+    onMouseUp: onMouseLeaveOrUp,
+    onMouseMove,
+  };
+
+  return { trackRef, handleScroll, dragEvents };
 };
