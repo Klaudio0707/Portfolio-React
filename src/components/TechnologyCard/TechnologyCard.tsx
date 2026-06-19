@@ -10,7 +10,7 @@ interface TechnologyCardProps {
   technology: Technology;
 }
 
-export function TechnologyCard({ technology }: TechnologyCardProps) {
+export const TechnologyCard = ({ technology }: TechnologyCardProps) => {
   const { name } = technology;
 
   return (

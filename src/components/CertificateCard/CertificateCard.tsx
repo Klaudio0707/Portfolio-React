@@ -5,7 +5,7 @@ interface CertificateCardProps {
   certificate: Certificate;
 }
 
-export function CertificateCard({ certificate }: CertificateCardProps) {
+export const CertificateCard = ({ certificate }: CertificateCardProps) => {
   const { title, issuer, year, credentialUrl } = certificate;
 
   return (

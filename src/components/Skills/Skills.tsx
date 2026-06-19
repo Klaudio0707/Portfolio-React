@@ -12,7 +12,7 @@ const TABS: { id: TabId; label: string; count: number }[] = [
   { id: 'certificates', label: 'Certificados',             count: CERTIFICATES.length },
 ];
 
-export function SkillsSection() {
+export const Skills = () => {
   const [activeTab, setActiveTab] = useState<TabId>('technologies');
 
   return (
@@ -48,7 +48,7 @@ export function SkillsSection() {
       >
         <Slider>
           {TECHNOLOGIES.map((tech) => (
-            <div key={tech.name} style={{ width: '160px' }}> {/* Largura fixa para o TechCard */}
+            <div key={tech.name} style={{ width: '160px' }}> 
               <TechnologyCard technology={tech} />
             </div>
           ))}
@@ -64,7 +64,7 @@ export function SkillsSection() {
       >
         <Slider>
           {CERTIFICATES.map((cert) => (
-            <div key={`${cert.issuer}-${cert.title}`} style={{ width: '300px' }}> {/* Largura fixa para o CertCard */}
+            <div key={`${cert.issuer}-${cert.title}`} style={{ width: '300px' }}>
               <CertificateCard certificate={cert} />
             </div>
           ))}

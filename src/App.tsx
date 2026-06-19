@@ -5,7 +5,7 @@ import { Hero } from './components/Hero/Hero'
 import { Toaster } from './ui/Toaster'
 import Contact from './components/Contact/Contact'
 import { Footer } from './components/Footer/Footer'
-import { SkillsSection } from './components'
+import { Skills } from './components/Skills/Skills'
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Toaster />
       <Hero />
-      <SkillsSection />
+      <Skills />
       <About />
       <Projects />
       <Contact/>

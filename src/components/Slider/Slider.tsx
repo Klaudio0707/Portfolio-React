@@ -6,7 +6,7 @@ interface SliderProps {
   children: React.ReactNode;
 }
 
-export function Slider({ children }: SliderProps) {
+export const Slider = ({ children }: SliderProps) => {
   const trackRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
