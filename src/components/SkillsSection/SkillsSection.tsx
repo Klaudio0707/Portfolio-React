@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { TECHNOLOGIES, CERTIFICATES } from '../../data/skills';
 import { TechnologyCard } from '../TechnologyCard';
 import { CertificateCard } from '../CertificateCard';
-import styles from './SkillsSection.module.css';
+import styles from './SkillsSection.module.scss';
 
 type TabId = 'technologies' | 'certificates';
 

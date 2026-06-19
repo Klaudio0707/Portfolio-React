@@ -1,6 +1,6 @@
 import { renderTechIcon } from '@/utils/renderTechIcon';
 import type { Technology } from '../../types/index';
-import styles from './TechnologyCard.module.css';
+import styles from './TechnologyCard.module.scss';
 
 interface TechnologyCardProps {
   technology: Technology;
