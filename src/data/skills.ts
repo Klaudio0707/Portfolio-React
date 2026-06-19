@@ -52,4 +52,10 @@ export const CERTIFICATES: Certificate[] = [
     year: 2022,
     credentialUrl: 'https://www.dio.me/',
   },
+  {
+    title: 'GitHub Actions Certification (CI/CD)',
+    issuer: 'GitHub',
+    year: 2026,
+    credentialUrl: '',
+  },
 ];
