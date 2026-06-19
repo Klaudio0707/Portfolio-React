@@ -8,11 +8,11 @@ export const Hero = () => {
 
   const handleCopyContact = async (e: React.MouseEvent) => {
     e.preventDefault();
-    try {
+   try {
       await navigator.clipboard.writeText('claudiorobertof@outlook.com.br');
       toast.success('Email copiado!');
-    } catch (err) {
-      toast.error('Falha ao copiar contato');
+    } catch { 
+      toast.error('Erro ao copiar');
     }
   };
 
