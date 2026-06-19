@@ -16,7 +16,7 @@ export const Skills = () => {
   const [activeTab, setActiveTab] = useState<TabId>('technologies');
 
   return (
-    <section className={styles.section} aria-labelledby="skills-heading">
+    <section className={styles.section} id="skills" aria-labelledby="skills-heading">
       <p className={styles.badge}>Habilidades</p>
       <h2 id="skills-heading" className={styles.heading}>
         Tecnologias & Certificados
