@@ -37,7 +37,7 @@ const Contact = () => {
                         />
                     </div>
                     <div className={styles.inputGroup}>
-                        <label htmlFor="email">E-mail (opcional)</label>
+                        <label htmlFor="email">E-mail</label>
                         <input
                             type="email"
                             name="email"
@@ -49,7 +49,6 @@ const Contact = () => {
                         />
                     </div>
 
-                    {/* Mensagem */}
                     <div className={styles.inputGroup}>
                         <label htmlFor="message">Mensagem</label>
                         <textarea
