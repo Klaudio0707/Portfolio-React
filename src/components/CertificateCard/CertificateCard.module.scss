@@ -1,0 +1,77 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1.25rem;
+  background: var(--bg-card-dark);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px; 
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.badgeOracle  { background: rgba(179, 71, 0, 0.15); color: #ff8533; }
+.badgeAWS     { background: rgba(26, 92, 143, 0.15); color: #66b3ff; }
+.badgeMeta    { background: rgba(59, 79, 184, 0.15); color: #8c9eff; }
+.badgeGoogle  { background: rgba(30, 110, 62, 0.15); color: #66cc8a; }
+.badgeDIO     { background: rgba(91, 47, 184, 0.15); color: #b388ff; }
+.badgeUdemy   { background: rgba(140, 94, 0, 0.15); color: #ffb84d; }
+
+.certIcon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.year {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-muted); 
+  text-decoration: none;
+  transition: color 0.1s ease;
+}
+
+.link:hover {
+  color: var(--text-main);
+}
