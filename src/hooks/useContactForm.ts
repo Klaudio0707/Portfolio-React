@@ -7,6 +7,14 @@ export const useContactForm = () => {
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const getSafeStorage = (key: string) => {
+    try {
+      return JSON.parse(localStorage.getItem(key) || '{"count": 0, "blockedUntil": 0}');
+    } catch {
+      return { count: 0, blockedUntil: 0 };
+    }
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -14,7 +22,7 @@ export const useContactForm = () => {
     const STORAGE_KEY = 'ux_contact_throttle';
     const COOLDOWN = 24 * 60 * 60 * 1000;
 
-    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{"count": 0, "blockedUntil": 0}');
+    const data = getSafeStorage(STORAGE_KEY);
 
     if (data.blockedUntil > now) {
       toast.error("Para evitar spam, aguarde 24 horas para enviar uma nova mensagem.");
