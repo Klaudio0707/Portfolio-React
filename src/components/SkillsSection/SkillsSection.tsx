@@ -3,6 +3,7 @@ import { TECHNOLOGIES, CERTIFICATES } from '../../data/skills';
 import { TechnologyCard } from '../TechnologyCard';
 import { CertificateCard } from '../CertificateCard';
 import styles from './SkillsSection.module.scss';
+import { Slider } from '../Slider/Slider';
 
 type TabId = 'technologies' | 'certificates';
 
@@ -38,18 +39,20 @@ export function SkillsSection() {
         ))}
       </div>
 
-      <div
+     <div
         id="panel-technologies"
         role="tabpanel"
         aria-labelledby="tab-technologies"
         hidden={activeTab !== 'technologies'}
         className={styles.panel}
       >
-        <div className={styles.techGrid}>
+        <Slider>
           {TECHNOLOGIES.map((tech) => (
-            <TechnologyCard key={tech.name} technology={tech} />
+            <div key={tech.name} style={{ width: '160px' }}> {/* Largura fixa para o TechCard */}
+              <TechnologyCard technology={tech} />
+            </div>
           ))}
-        </div>
+        </Slider>
       </div>
 
       <div
@@ -59,11 +62,13 @@ export function SkillsSection() {
         hidden={activeTab !== 'certificates'}
         className={styles.panel}
       >
-        <div className={styles.certGrid}>
+        <Slider>
           {CERTIFICATES.map((cert) => (
-            <CertificateCard key={`${cert.issuer}-${cert.title}`} certificate={cert} />
+            <div key={`${cert.issuer}-${cert.title}`} style={{ width: '300px' }}> {/* Largura fixa para o CertCard */}
+              <CertificateCard certificate={cert} />
+            </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </section>
   );

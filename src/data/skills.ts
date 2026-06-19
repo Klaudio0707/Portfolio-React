@@ -1,28 +1,29 @@
 import type { Technology, Certificate } from '../types/index';
 
 export const TECHNOLOGIES: Technology[] = [
-{ name: 'Java' },
+  { name: 'Java' },
   { name: 'Spring Boot' },
-  { name: 'Python' },
-  { name: 'NestJS' },
+  { name: 'Angular' },
   { name: 'Maven' },
   
   { name: 'TypeScript' },
-  { name: 'Angular' },
   { name: 'React' },
   { name: 'Redux' },
-  { name: 'JavaScript' },
+  { name: 'JavaScript'},
+  { name: 'NestJS' },
   { name: 'CSS' },
+  { name: 'SCSS' },
+
   
   { name: 'PostgreSQL' },
   { name: 'MongoDB' },
-  { name: 'Zod' },
   
   { name: 'Docker' },
   { name: 'Google Cloud' },
   { name: 'AWS' },
   { name: 'Git' },
   { name: 'CI/CD' },
+  { name: 'Python' },
   { name: 'IA Generativa' },
 ];
 
