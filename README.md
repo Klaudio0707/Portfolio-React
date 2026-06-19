@@ -1,65 +1,72 @@
 # 💻 Portfólio de Engenharia de Software
 
 ![Status do Projeto](https://img.shields.io/badge/status-active-brightgreen)
-![Tecnologias](https://img.shields.io/badge/stack-React-blue)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=flat&logo=vite&logoColor=FFD62E)
 
-Bem-vindo ao repositório do meu portfólio pessoal. Este projeto é uma vitrine de boas práticas em arquitetura de frontend, focado em **performance**, **manutenibilidade** e **Clean Code**.
+Este repositório contém o código-fonte do meu portfólio pessoal. Desenvolvido como uma vitrine prática de **Arquitetura de Frontend**, o projeto foca em manutenibilidade, escalabilidade e aplicação rigorosa do *Clean Code*.
 
 ---
 
 ## 🚀 Sobre Mim
 
-Sou **Cláudio Roberto **, Desenvolvedor de Software. Com sólida formação em Análise e Desenvolvimento de Sistemas e experiência prática em rotinas logísticas e operacionais, aplico rigor técnico e otimização de processos para conceber aplicações robustas, escaláveis e eficientes.
+Sou **Cláudio Roberto**, Engenheiro de Software Full Stack. Com sólida formação em Análise e Desenvolvimento de Sistemas e experiência resolvendo problemas de rotinas operacionais e logísticas, aplico rigor técnico na construção de soluções *End-to-End*.
 
-Stack principal: **Java, Spring Boot, Angular, TypeScript/JavaScript e React**.
+* **Stack Principal:** Java, Spring Boot, Angular, React e TypeScript.
+* **Infraestrutura e Nuvem:** AWS, Google Cloud, Docker e CI/CD (GitHub Actions).
 
 ---
 
 ## 🏗️ Arquitetura e Decisões Técnicas
 
-O projeto foi estruturado seguindo rigorosos padrões de engenharia de software voltados ao ecossistema frontend:
+O ecossistema foi estruturado para garantir máxima performance e coesão, utilizando padrões modernos de desenvolvimento:
 
-* **Gerenciamento de Estado e Performance:** Utilização intensiva de Custom Hooks (`useCarousel`, `useContactForm`, `useScrollVisibility`) para o completo isolamento da lógica de negócio da camada de apresentação. Adoção estratégica de `useRef` para controle de eventos contínuos de *drag* e `requestAnimationFrame` para *throttling* de listeners globais de scroll, eliminando re-renderizações desnecessárias e garantindo taxa estável de 60fps.
-* **Feedback Contínuo e UX:** Implementação de fluxos assíncronos resilientes com o padrão **useToast** para interações não-bloqueantes. O formulário de contato conta com uma lógica de *UX Throttle* armazenada em `localStorage` (limite de 3 envios a cada 24h) para guiar o comportamento do usuário legítimo, delegando o *rate limiting* estrito por IP e a segurança antispam para a infraestrutura de borda da API do Web3Forms.
-* **Design System & Estilização:** Utilização de *CSS Modules* combinados com tokens globais de estilização (:root), blindando os escopos dos componentes contra vazamento de estilo e estabelecendo uma única fonte de verdade (*Single Source of Truth*) para a identidade visual.
-* **Acessibilidade (A11y) e SEO:** Adesão estrita às diretrizes da W3C através do respeito à hierarquia semântica do DOM (removendo títulos concorrentes no cabeçalho), silenciamento de ícones puramente decorativos para leitores de tela (`aria-hidden="true"`) e suporte nativo a navegação por teclado nos carrosséis (`tabIndex` e manipulação de eventos `KeyDown`). Injeção de Open Graph Meta Tags para garantir a perfeita indexação e exibição de cartões rich-media em redes profissionais.
+* **Design Patterns & Reusabilidade (DRY):** Implementação de uma fábrica global de SVGs (`renderTechIcon`) estabelecendo uma *Single Source of Truth* para a renderização de assets. Uso massivo de **React Composition** (ex: componente genérico `Slider`) para desacoplar a lógica de scroll horizontal da camada de dados das seções.
+* **Gerenciamento de Estado e Segurança:** Separação de responsabilidades utilizando *Custom Hooks*. O `useContactForm` encapsula toda a lógica de submissão, implementando estratégias de *Fail-Safe* para leitura do `localStorage` e limitando disparos na interface (rate-limiting), delegando a barreira antispam final para a API do Web3Forms.
+* **UX Não-Bloqueante:** Utilização do padrão **useToast** para feedbacks assíncronos fluidos, sem travar a jornada do usuário durante o envio de formulários ou interações de cópia de e-mail.
+* **Estilização Estrutural (SCSS Modules):** Migração arquitetural para SCSS, aproveitando aninhamento (*nesting*) para um código limpo e escopo modular, garantindo que o CSS de um componente jamais interfira em outro.
+* **Acessibilidade (A11y):** Diretrizes rigorosas da W3C implementadas. Silenciamento de SVGs decorativos (`aria-hidden="true"`), roteamento semântico de âncoras e tags ARIA (`aria-controls`, `aria-label`) para total suporte a leitores de tela.
 
 ---
 
 ## ⚙️ Funcionalidades
 
-- **Interface Fluida:** Layout totalmente responsivo construído com Grid e Flexbox modernos.
-- **Controle de Fluxo de Envio:** Contador visual dinâmico que limita e notifica tentativas consecutivas de mensagens.
-- **Navegação Inclusiva:** Carrosséis operáveis tanto por gestos de arrastar quanto por setas direcionais do teclado.
+- **Layout Responsivo:** Interfaces construídas com Grid/Flexbox avançados que se adaptam desde monitores ultrawide até dispositivos mobile.
+- **Navegação Horizontal:** Carrosséis independentes (baseados em Composição) controláveis via *touch*, teclado e botões nativos.
+- **Formulário Resiliente:** Validação de campos e prevenção contra abuso de envios repetidos diretamente no *client-side*.
 
 ---
 
-## 🛠️ Como Executar
+## 🛠️ Como Executar o Projeto
 
-Siga os passos abaixo para rodar o ambiente de desenvolvimento localmente:
+Siga as instruções abaixo para rodar o ambiente de desenvolvimento em sua máquina local:
 
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/Klaudio0707/Portfolio-React.git](https://github.com/Klaudio0707/Portfolio-React.git)
-Entre na pasta:
+### 1. Pré-requisitos
+Certifique-se de ter o [Node.js](https://nodejs.org/) instalado.
 
-Bash
+### 2. Instalação e Execução
+Clone o repositório, instale as dependências e inicie o servidor (Vite):
+
+```bash
+# Clone o repositório
+git clone [https://github.com/Klaudio0707/Portfolio-React.git](https://github.com/Klaudio0707/Portfolio-React.git)
+
+# Entre no diretório do projeto
 cd Portfolio-React
-Instale as dependências:
 
-Bash
+# Instale as dependências
 npm install
-Variáveis de Ambiente:
-Crie um arquivo .env na raiz e adicione:
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+3. Variáveis de Ambiente
+Para testar o envio de formulários, crie um arquivo .env na raiz do projeto e adicione a sua chave do Web3Forms:
 
 Snippet de código
-VITE_WEB3FORMS_ACCESS_KEY=sua_chave_aqui
-Inicie o projeto:
-
-Bash
-npm run dev
-
+VITE_WEB3FORMS_ACCESS_KEY=sua_chave_de_acesso_aqui
 📬 Contato
-Sinta-se à vontade para enviar uma mensagem através do formulário integrado na aplicação ou conectar-se diretamente através dos canais profissionais.
+Sinta-se à vontade para enviar uma mensagem através do formulário integrado na aplicação ou conectar-se diretamente através do meu LinkedIn.
 
 Desenvolvido por Cláudio Roberto.
