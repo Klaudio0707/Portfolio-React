@@ -48,6 +48,19 @@ export const CERTIFICATES: Certificate[] = [
     credentialUrl: 'https://hermes.dio.me/certificates/UQ5QYJ7D.pdf',
   },
   {
+    title: 'Dominando Interfaces e Lambda em Java',
+    issuer: 'DIO',
+    year: 2026,
+    credentialUrl: 'https://hermes.dio.me/certificates/0S6M8OD2.pdf',
+  },
+  {
+    title: 'Conhecendo Collection Java',
+    issuer: 'DIO',
+    year: 2025,
+    credentialUrl: 'https://hermes.dio.me/certificates/V6QXTMGG.pdf',
+
+  },
+  {
     title: 'React com TypeScript',
     issuer: 'Origamid',
     year: 2025,
@@ -68,4 +81,17 @@ export const CERTIFICATES: Certificate[] = [
     credentialUrl: 'https://udemy-certificate.s3.amazonaws.com/image/UC-a1fc41ea-a78e-421b-a3eb-11a096155888.jpg?v=1755609095000',
 
   },
+   {
+    title: 'Trabalhando com Docker Compose',
+    issuer: 'DIO',
+    year: 2025,
+    credentialUrl: 'https://hermes.dio.me/certificates/GV5PYUUU.pdf',
+  },
+   {
+    title: 'Adicionando SEgurança a uma API REST com Spring Security',
+    issuer: 'DIO',
+    year: 2025,
+    credentialUrl: 'https://hermes.dio.me/certificates/TCQUHQAN.pdf',
+  },
+
 ];
