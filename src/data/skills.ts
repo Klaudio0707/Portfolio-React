@@ -30,33 +30,42 @@ export const TECHNOLOGIES: Technology[] = [
 
 export const CERTIFICATES: Certificate[] = [
   {
-    title: 'Oracle Certified Professional: Java SE Developer',
-    issuer: 'Oracle',
-    year: 2023,
-    credentialUrl: 'https://www.oracle.com/education/certification/',
-  },
-  {
-    title: 'AWS Cloud Practitioner Essentials',
-    issuer: 'AWS',
-    year: 2023,
-    credentialUrl: 'https://aws.amazon.com/certification/',
-  },
-  {
-    title: 'Meta Front-End Developer Professional Certificate',
-    issuer: 'Meta',
-    year: 2022,
-    credentialUrl: 'https://www.coursera.org/',
-  },
-  {
-    title: 'Formação Java Developer',
-    issuer: 'DIO',
-    year: 2022,
-    credentialUrl: 'https://www.dio.me/',
-  },
-  {
-    title: 'GitHub Actions Certification (CI/CD)',
-    issuer: 'GitHub',
+    title: 'Curso de Formação de Desenvolvedores',
+    issuer: 'Tascom',
     year: 2026,
-    credentialUrl: '',
+    credentialUrl: 'https://media.licdn.com/dms/image/v2/D4E22AQFwhNTZHNh1wA/feedshare-image-high-res/B4EZwvDLpcJYAU-/0/1770315889952?e=1783555200&v=beta&t=6X8NDQ_RzWjgPB2BJjfoutcb7CQGg95cKOdzq3n1vGQ',
+  },
+  {
+    title: 'Computação em AWS',
+    issuer: 'AWS',
+    year: 2026,
+    credentialUrl: 'https://hermes.dio.me/certificates/MLUKOUVA.pdf',
+  },
+  {
+    title: 'Accenture - Desenvolvimento Java e Cloud',
+    issuer: 'DIO',
+    year: 2026,
+    credentialUrl: 'https://hermes.dio.me/certificates/UQ5QYJ7D.pdf',
+  },
+  {
+    title: 'React com TypeScript',
+    issuer: 'Origamid',
+    year: 2025,
+    credentialUrl: 'https://www.origamid.com/certificate/a3099308',
+  },
+ 
+  {
+    title: 'Engenharia de Qualidade de Software',
+    issuer: 'Cesar',
+    year: 2025,
+    credentialUrl: 'https://media.licdn.com/dms/image/v2/D4D2DAQHOEo4B4kWUzw/profile-treasury-image-shrink_1920_1920/B4DZq8x0F9GQAc-/0/1764103768214?e=1782766800&v=beta&t=8bmwk3armbq7jIm-VKue6zqO3_ZpKxJG0YEt9PLhpqE',
+
+  },
+  {
+    title: 'Formação Front-End Developer',
+    issuer: 'Udemy',
+    year: 2025,
+    credentialUrl: 'https://udemy-certificate.s3.amazonaws.com/image/UC-a1fc41ea-a78e-421b-a3eb-11a096155888.jpg?v=1755609095000',
+
   },
 ];
