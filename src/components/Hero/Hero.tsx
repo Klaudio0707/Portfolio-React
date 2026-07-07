@@ -26,8 +26,8 @@ export const Hero = () => {
             Engenheiro Full Stack · <span translate="no">Java</span>, <span translate="no">Spring Boot</span>, <span translate="no">Angular</span> e <span translate="no">React</span>.
           </h1>
           <p className={styles.bio}>
-            +7 anos unindo operações reais de negócio com engenharia de software limpa.
-            Construo APIs robustas em Java/Spring Boot e interfaces modernas em React e Angular — do backend escalável até o último pixel do frontend.
+           Engenheiro de Software orientado a Clean Architecture. Desenvolvo sistemas ponta a ponta, integrando serviços back-end
+           escaláveis em Spring Boot com ecossistemas front-end robustos em Angular e React.
           </p>
 
           <div className={styles.actionButtons}>
