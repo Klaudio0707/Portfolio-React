@@ -26,7 +26,7 @@ export const Hero = () => {
             Engenheiro Full Stack · <span translate="no">Java</span>, <span translate="no">Spring Boot</span>, <span translate="no">Angular</span> e <span translate="no">React</span>.
           </h1>
           <p className={styles.bio}>
-           Engenheiro de Software Full Stack orientado a Clean Architecture. Desenvolvo sistemas ponta a ponta, integrando serviços back-end
+           Engenheiro de Software orientado a Clean Architecture. Desenvolvo sistemas ponta a ponta, integrando serviços back-end
            escaláveis em Spring Boot com ecossistemas front-end robustos em Angular e React.
           </p>
 
