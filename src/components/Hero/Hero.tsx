@@ -56,7 +56,7 @@ export const Hero = () => {
       </div>
 
       <a
-        href="#sobre"
+        href="#about"
         className={`${styles.scrollIndicator} ${isScrolled ? styles.hidden : ''}`}
         aria-label="Rolar para a seção sobre"
       >
