@@ -23,7 +23,7 @@ export const Hero = () => {
         <div className={styles.textContent}>
           <span className={styles.greeting}>Olá, meu nome é Cláudio Roberto</span>
           <h1 className={styles.title}>
-            Engenheiro Full Stack · <span translate="no">Java</span>, <span translate="no">Spring Boot</span>, <span translate="no">Angular</span> e <span translate="no">React</span>.
+            Engenheiro Software · <span translate="no">Java</span>, <span translate="no">Spring Boot</span>, <span translate="no">Angular</span> e <span translate="no">React</span>.
           </h1>
           <p className={styles.bio}>
            Engenheiro de Software orientado a Clean Architecture. Desenvolvo sistemas ponta a ponta, integrando serviços back-end
@@ -31,7 +31,7 @@ export const Hero = () => {
           </p>
 
           <div className={styles.actionButtons}>
-            <a href="/CV_ClaudioRoberto.pdf" download className={styles.btnPrimary}>
+            <a href="/CV_Desenvolvedor_Cláudio_Roberto.pdf" download className={styles.btnPrimary}>
               Baixar CV
             </a>
 
