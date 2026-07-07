@@ -31,7 +31,7 @@ export const Hero = () => {
           </p>
 
           <div className={styles.actionButtons}>
-            <a href="/CV_ClaudioRoberto.pdf" download className={styles.btnPrimary}>
+            <a href="/CV_Desenvolvedor_Cláudio_Roberto.pdf" download className={styles.btnPrimary}>
               Baixar CV
             </a>
 
