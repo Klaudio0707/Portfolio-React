@@ -88,7 +88,7 @@ export const CERTIFICATES: Certificate[] = [
     credentialUrl: 'https://hermes.dio.me/certificates/GV5PYUUU.pdf',
   },
    {
-    title: 'Adicionando SEgurança a uma API REST com Spring Security',
+    title: 'Adicionando Segurança a uma API REST com Spring Security',
     issuer: 'DIO',
     year: 2025,
     credentialUrl: 'https://hermes.dio.me/certificates/TCQUHQAN.pdf',
