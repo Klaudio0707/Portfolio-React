@@ -17,7 +17,7 @@ export const projectsData: Project[] = [
     status: 'completed',
     motive: 'Landing page institucional e de conversão para o setor de Comércio Exterior. (O Impacto): Maximizou a presença digital da marca com foco em captação de leads e tempo de carregamento otimizado. (A Engenharia): Desenvolvida com React e TypeScript, focando em componentização limpa e tipagem estrita, com a esteira de CI/CD e distribuição global servidas através da infraestrutura de edge da Cloudflare.',
     image: Thecomex,
-    deployUrl: 'https://thecomex-deploy.com.br', 
+    deployUrl: 'https://thecomex.com.br/', 
     githubUrl: 'https://github.com/Klaudio0707/landing-b2b',
     featured: true,
   },
